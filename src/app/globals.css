@@ -6,7 +6,7 @@
   --color-darkpurple: #683292;
   --color-lightpurple: #cfb6e2;
   --color-lightgray: #787878;
-  --color-gray: ##646464;
+  --color-gray: #646464;
 
   --font-archivo: var(--font-archivo);
   --font-berkshire: var(--font-berkshire-mono);
@@ -19,5 +19,5 @@ body {
   @apply font-archivo;
 }
 .heading{
-  @apply font-[Berkshire] text-[60px] leading-16 font-regular
+  @apply font-[Berkshire] text-[60px] leading-16 font-normal
 }
