@@ -1,24 +1,72 @@
-import React from 'react'
-import { AddToWishlist } from './Icons'
+import React from "react";
+import { AddToCard, AddToWishlist, Star } from "./Icons";
+import Button from "./Button";
 
-const ProductDetailsCard = ({image,}) => {
+const ProductDetailsCard = ({ image, heading, title, price }) => {
+  // Dynamic Background Color Based on Title
+  const cardBgColor = title?.toLowerCase().includes("vanilla")
+    ? "bg-[rgba(247,242,247,1)]"
+    : title?.toLowerCase().includes("chocolate")
+    ? "bg-[rgba(255,238,238,1)]"
+    : title?.toLowerCase().includes("mint")
+    ? "bg-[rgba(246,249,225,1)]"
+    : "bg-[rgba(255,250,244,1)]";
+
   return (
-    <div className=' bg-white py-[11px_18px] px-[11px] '>
-        <div className={`${items.title.toLowerCase().includes("venilla")?"bg-[rgba(247,242,247,1)]":items.title.toLowerCase().includes("chocolate")?"bg-[rgba(255,238,238,1)]":items.title.toLowerCase().includes("mint")?"bg-[rgba(246,249,225,1)]":"bg-[rgba(255,250,244,1)]"} relative  `}> 
-          <div className=' bg-white rounded-[40px] max-w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] '>
-            <AddToWishlist/>
-
-          </div>
-
-          {image}
-
-            
-
+    <div className="bg-white p-[11px] rounded-[12px] shadow-md max-w-[250px]">
+      
+      {/* Image Section */}
+      <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
+        
+        {/* Wishlist Button */}
+        <div className="bg-white rounded-full w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
+          <AddToWishlist />
         </div>
 
+        <div className="flex justify-center">
+          {image}
+        </div>
+      </div>
 
+      {/* Content Section */}
+      <div className="mt-[21px]">
+
+        {/* Heading & Rating */}
+        <div className="flex justify-between items-center">
+          <h3 className="text-darkbrown text-xl font-bold leading-[24px]">
+            {heading}
+          </h3>
+
+          <div className="flex gap-[3px] items-center">
+            <Star />
+            <p className="text-sm font-semibold text-darkbrown">
+              4.9/5
+            </p>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="mt-[13px] text-sm leading-[22px] text-gray-600">
+          {title}
+        </p>
+
+        {/* Price & Cart Button */}
+        <div className="mt-[12px] flex justify-between items-center">
+          <p className="font-bold text-[22px] text-pink">
+            {price}
+          </p>
+
+          <Button
+            theme="secondary"
+            height="h-[46px]"
+            width="w-[46px]"
+            icons={<AddToCard />}
+            type="button"
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetailsCard
+export default ProductDetailsCard;
