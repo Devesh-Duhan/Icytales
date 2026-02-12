@@ -19,5 +19,5 @@ body {
   @apply font-archivo;
 }
 .heading{
-  @apply font-[Berkshire] text-[60px] leading-16 font-regular
+  @apply font-[Berkshire] text-[60px] leading-16 
 }
