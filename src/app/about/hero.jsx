@@ -1,9 +1,21 @@
+import CommonHero from '@/components/common/CommonHero';
 import React from 'react'
 
-const hero = () => {
+const Hero = () => {
   return (
-    <div>hero</div>
-  )
+    <div>
+      <CommonHero
+        title="About Us"
+        breadcrumb={
+          <>
+            <span className="text-pink-500">Home</span>
+            <span>/</span>
+            <span>About Us</span>
+          </>
+        }
+      />
+    </div>
+  );
 }
 
-export default hero
+export default Hero

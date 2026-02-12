@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommonHero = () => {
+const CommonHero = ({ title, breadcrumb }) => {
   return (
     <section className="w-full py-20 bg-linear-to-r from-[#d7cdd6] via-[#dcdcdc] to-[#cfe3ea] flex flex-col items-center justify-center">
       {/* Title */}
@@ -14,6 +14,6 @@ const CommonHero = () => {
       </div>
     </section>
   );
-}
+};
 
 export default CommonHero
