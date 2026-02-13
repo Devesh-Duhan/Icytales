@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div>
       <CommonHero
-        title="Review"
+        title="Terms & Conditions"
         breadcrumb={
           <>
             <Link href="/">
@@ -15,8 +15,8 @@ const Hero = () => {
 
             <span>/</span>
 
-            <Link href="/review">
-              <span>Review</span>
+            <Link href="termsAndConditions ">
+              <span>Terms & Conditions</span>
             </Link>
           </>
         }

@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from '../team/Hero'
 import TermsAndConditions from './TermsAndConditions'
+import Hero from './Hero'
 
 const page = () => {
   return (

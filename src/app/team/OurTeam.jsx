@@ -7,7 +7,7 @@ const OurTeam = () => {
   return (
     <section className="container  pt-35.5 pb-20">
       <div className="flex justify-center flex-col items-center">
-        <h2 className="heading">
+        <h2 className="heading text-darkbrown">
           Our <span className="text-pink">Team</span> Members
         </h2>
 

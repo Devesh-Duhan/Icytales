@@ -12,16 +12,15 @@ import SummerSpecial from "@/components/home/SummerSpecial";
 export default function Home() {
   return (
     <>
-      {/* <Explore/> */}
-
       {/* Shared gradient parent for Header + Hero */}
       <div className="bg-[url(/images/heroBg.png)] bg-cover bg-no-repeat">
         <Header />
         <HeroSection />
       </div>
+      <Explore />
       <Favourite />
       <SummerSpecial />
-      <SignUp/>
+      <SignUp />
     </>
   );
 }
