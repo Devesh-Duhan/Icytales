@@ -1,10 +1,9 @@
-import Button from "@/components/common/Button";
-
+import Explore from "@/components/home/Explore";
 
 export default function Home() {
-  return (
-    <>
-    
-    </>
-  );
+  return (
+    <>
+     <Explore/>
+    </>
+  );
 }

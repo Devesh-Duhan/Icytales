@@ -51,7 +51,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
         </p>
 
         {/* Price & Cart Button */}
-        <div className="mt-[12px] flex justify-between items-center">
+        <div className="mt-[12px]  flex justify-between items-center">
           <p className="font-bold text-[22px] text-pink">
             {price}
           </p>
