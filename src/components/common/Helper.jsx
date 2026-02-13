@@ -26,18 +26,18 @@ export const teamData = [
     id: 1,
     name: "Marvin Joner",
     role: "Bakery Worker",
-    image: "/team/team1.jpg",
+    image: "/images/marvinJoner.png",
   },
   {
     id: 2,
     name: "Patricia Woodrum",
     role: "Staff Worker",
-    image: "/team/team2.jpg",
+    image: "/images/patriciaWoodrum.png",
   },
   {
     id: 3,
     name: "Hannaz Stone",
     role: "Shop Worker",
-    image: "/team/team3.jpg",
+    image: "/images/hannazStone.png",
   },
 ];

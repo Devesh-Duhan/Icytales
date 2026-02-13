@@ -7,17 +7,17 @@ const Team = () => {
     <div>
       {" "}
       <section
-        className="w-full py-[142px] bg-[linear-gradient(299.54deg,#EFD7EF_8%,#F5F9FC_43%,#F8EAE1_64%,#EAF8F9_87%)]
+        className="w-full py-35.5 bg-[linear-gradient(299.54deg,#EFD7EF_8%,#F5F9FC_43%,#F8EAE1_64%,#EAF8F9_87%)]
 "
       >
         <div className="max-w-6xl mx-auto px-6 text-center">
           {/* Heading */}
-          <h2 className="text-5xl font-semibold">
-            Our <span className="text-pink-500">Team</span> Members
+          <h2 className="heading">
+            Our <span className="text-pink">Team</span> Members
           </h2>
 
           {/* Subtitle */}
-          <p className="mt-4 text-gray-500">
+          <p className="pt-4.5 text-lightbrown">
             Get to know the friendly faces behind your favorite flavors.
           </p>
 
