@@ -137,3 +137,41 @@ export const testimonialData = [
 ];
 
 
+
+export const products = [
+  {
+    id: 1,
+    heading: " Chocolate Brownie Sundae",
+    title: "Rich chocolate ice cream with chunks of brownie.",
+    price: "$5.49",
+    image: "/images/chocolate.png",
+  },
+  {
+    id: 2,
+    heading: "Strawberry Shortcake",
+    title: "Strawberry ice cream layered with shortcake.",
+    price: "$5.29",
+    image: "/images/strawberry.png",
+  },
+  {
+    id: 3,
+    heading: "Mint Chocolate Chip Cone",
+    title: "Refreshing mint ice cream with chocolate chips.",
+    price: "$3.99",
+    image: "/images/mint.png",
+  },
+  {
+    id: 4,
+    heading: "Classic Vanilla Ice Cream",
+    title: "Creamy vanilla ice cream topped with cherry.",
+    price: "$4.99",
+    image: "/images/vanilla.png",
+  },
+  {
+    id: 5,
+    heading: "Mint Chocolate Chip Cone",
+    title: "Refreshing mint ice cream with chocolate chips.",
+    price: "$3.99",
+    image: "/images/mint.png",
+  },
+];

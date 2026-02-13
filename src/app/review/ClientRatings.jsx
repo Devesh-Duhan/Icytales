@@ -27,6 +27,22 @@ const ClientRatings = () => {
       {/* Swiper */}
       <div className="pt-12.5">
         <Swiper
+          className=" pb-15! [&_.swiper-pagination]:bottom-1.5!
+    [&_.swiper-pagination]:flex
+    [&_.swiper-pagination]:justify-center
+    [&_.swiper-pagination]:items-center
+    [&_.swiper-pagination]:gap-2
+
+    [&_.swiper-pagination-bullet]:w-3
+    [&_.swiper-pagination-bullet]:h-3
+    [&_.swiper-pagination-bullet]:rounded-full
+    [&_.swiper-pagination-bullet]:bg-gray-300
+    [&_.swiper-pagination-bullet]:opacity-100
+    [&_.swiper-pagination-bullet]:transition-all
+    [&_.swiper-pagination-bullet]:duration-300
+
+    [&_.swiper-pagination-bullet-active]:!bg-[rgba(248,61,142,1)]
+    [&_.swiper-pagination-bullet-active]:scale-125"
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
@@ -39,7 +55,7 @@ const ClientRatings = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="testimonialSwiper"
+
         >
           {testimonialData.map((item) => (
             <SwiperSlide key={item.id}>

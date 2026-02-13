@@ -1,4 +1,6 @@
+import FavouritesSwiper from "@/components/common/FvouritesSwiper";
 import Explore from "@/components/home/Explore";
+import Favourite from "@/components/home/Favourite";
 import SignUp from "@/components/home/SignUp";
 import Image from "next/image";
 import Header from "@/components/common/Header";
@@ -14,7 +16,9 @@ export default function Home() {
         <Header />
         <HeroSection />
       </div>
+     <Favourite/>
+    
+     {/* <SignUp/> */}
     </>
   );
 }
-
