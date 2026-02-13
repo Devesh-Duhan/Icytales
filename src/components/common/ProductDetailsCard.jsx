@@ -1,6 +1,7 @@
 import React from "react";
 import { AddToCard, AddToWishlist, Star } from "./Icons";
 import Button from "./Button";
+import Link from "next/link";
 
 const ProductDetailsCard = ({ image, heading, title, price }) => {
   // Dynamic Background Color Based on Title
@@ -13,13 +14,13 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
     : "bg-[rgba(255,250,244,1)]";
 
   return (
-    <div className="bg-white p-[11px] rounded-[12px] shadow-md max-w-[250px]">
+    <div className="bg-white p-[11px] rounded-[12px] shadow-md  mx-auto">
       
       {/* Image Section */}
       <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
         
         {/* Wishlist Button */}
-        <div className="bg-white rounded-full w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
+        <div  className="bg-white rounded-full w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
           <AddToWishlist />
         </div>
 
@@ -33,7 +34,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
 
         {/* Heading & Rating */}
         <div className="flex justify-between items-center">
-          <h3 className="text-darkbrown text-xl font-bold leading-[24px]">
+          <h3 className="text-darkbrown text-xl font-bold leading-[24px] max-w-[160px] w-full" >
             {heading}
           </h3>
 
@@ -46,7 +47,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
         </div>
 
         {/* Description */}
-        <p className="mt-[13px] text-sm leading-[22px] text-gray-600">
+        <p className="mt-[13px] max-w-[180px] w-full text-sm leading-[22px] text-gray-600">
           {title}
         </p>
 
@@ -55,14 +56,17 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
           <p className="font-bold text-[22px] text-pink">
             {price}
           </p>
-
+<Link href="/" >
           <Button
             theme="secondary"
             height="h-[46px]"
             width="w-[46px]"
-            icons={<AddToCard />}
+            icons={<AddToCard/>}
+            
             type="button"
+            
           />
+          </Link>
         </div>
       </div>
     </div>

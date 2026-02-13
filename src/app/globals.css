@@ -17,6 +17,9 @@
 .container {
   @apply w-full max-w-291 px-3 mx-auto;
 }
+.outer-container {
+  @apply w-full max-w-480 px-3 mx-auto;
+}
 
 body {
   @apply font-archivo;
