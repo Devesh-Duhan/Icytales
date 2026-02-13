@@ -18,7 +18,7 @@ const CommonHero = ({ title, breadcrumb }) => {
         children: React.cloneElement(child.props.children, {
           className: `
               ${child.props.children.props?.className || ""}
-              ${isActive ? "text-500" : ""}
+              ${isActive ? "text-pink-500" : ""}
             `,
         }),
       });

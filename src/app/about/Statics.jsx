@@ -6,12 +6,12 @@ const Statics = () => {
     <section className="py-36.25">
       <div className="container flex flex-col justify-center items-center">
         {/* Heading */}
-        <h2 className="heading text-center">
+        <h2 className="heading text-center text-darkbrown">
           Our <span className="text-pink">Statistics</span>
         </h2>
 
         {/* Subtitle */}
-        <p className="pt-4.5 text-lightbrown text-lg text-center">
+        <p className="pt-4.5 text-lightbrown leading-6.5 text-xl text-center">
           What makes us special through our impressive statistics.
         </p>
 
