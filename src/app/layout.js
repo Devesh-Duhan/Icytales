@@ -10,6 +10,7 @@ const berkshire = Berkshire_Swash({
   variable: "--font-berkshire-mono",
   subsets: ["latin"],
   weight: ["400"],
+  display:'swap'
 });
 
 export const metadata = {
