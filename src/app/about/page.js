@@ -1,11 +1,19 @@
 import React from 'react'
 
-import CommonHero from '@/components/common/CommonHero'
+import Hero from './Hero'
+import Journey from './Journey'
+import Misson from './Misson'
+import Statics from './Statics'
+import Team from './Team'
 
 const page = () => {
   return (
     <div>
-        <CommonHero/>
+        {/* <Hero/> */}
+        {/* <Journey/> */}
+        {/* <Misson/> */}
+        {/* <Statics/> */}
+        <Team/>
     </div>
   )
 }

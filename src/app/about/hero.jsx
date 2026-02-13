@@ -1,5 +1,6 @@
-import CommonHero from '@/components/common/CommonHero';
-import React from 'react'
+import CommonHero from "@/components/common/CommonHero";
+import Link from "next/link";
+import React from "react";
 
 const Hero = () => {
   return (
@@ -8,14 +9,20 @@ const Hero = () => {
         title="About Us"
         breadcrumb={
           <>
-            <span className="text-pink-500">Home</span>
+            <Link href="/">
+              <span>Home</span>
+            </Link>
+
             <span>/</span>
-            <span>About Us</span>
+
+            <Link href="/about">
+              <span>About Us</span>
+            </Link>
           </>
         }
       />
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;

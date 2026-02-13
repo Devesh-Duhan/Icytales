@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../common/Button';
+import { AddToWishlist, RightArrow } from '../common/Icons';
 
 const SignUp = () => {
   return (
@@ -21,11 +22,28 @@ const SignUp = () => {
             />
             <Button
               theme="primary"
-              content="Explore Our Menu"
-              icons="<RightArrowIcon  />"
-              height="h-[62px] "
-              width="w-[200px]"
+              height="h-12"
+              width="w-44"
+              leading="leading-5"
+              icons={<RightArrow />}
+              className="uppercase tracking-wide"
+              type="button"
+            >
+              Get Started
+            </Button>
+          </div>
+          <div className="flex justify-center items-center gap-3">
+            <input
+              type="radio"
+              id="policy"
+              className="accent-pink cursor-pointer"
             />
+            <label htmlFor="policy">
+              I agree to the{" "}
+              <span className="text-pink-500 cursor-pointer underline">
+                privacy policy
+              </span>
+            </label>
           </div>
         </div>
       </div>
