@@ -1,11 +1,14 @@
 import Header from "@/components/common/Header";
-import Image from "next/image";
+import HeroSection from "@/components/home/HeroSection";
 
 export default function Home() {
   return (
     <>
-    <Header/>
-      {/* <p className=" text-[40px] font-[berkshire] text-black">hello</p> */}
+      {/* Shared gradient parent for Header + Hero */}
+      <div className="bg-[url(/images/heroBg.png)] bg-cover bg-no-repeat">
+        <Header />
+        <HeroSection />
+      </div>
     </>
   );
 }

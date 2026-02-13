@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&display=swap");
+
 @import "tailwindcss";
+
 @theme {
   --color-pink: #f83d8e;
   --color-darkbrown: #0f0200;
@@ -6,7 +9,7 @@
   --color-darkpurple: #683292;
   --color-lightpurple: #cfb6e2;
   --color-lightgray: #787878;
-  --color-gray: #646464;
+  --color-gray: #e3e4e5;
 
   --font-archivo: var(--font-archivo);
   --font-berkshire: var(--font-berkshire-mono);
@@ -18,6 +21,10 @@
 body {
   @apply font-archivo;
 }
-.heading{
-  @apply font-[Berkshire] text-[60px] leading-16 font-normal
+.heading {
+  font-family: "Berkshire Swash", serif;
+  @apply text-[60px] leading-16;
+}
+.bekshire{
+   font-family: "Berkshire Swash", serif;
 }
