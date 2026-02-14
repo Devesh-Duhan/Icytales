@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const Discount = () => {
   return (
-    <section className="container">
+    <section className="container pt-35.5 pb-40.5">
       <div className=" flex flex-col justify-center items-center">
         <h2 className="heading">
           Upto <span className="text-pink">30%</span> Discount
@@ -24,7 +24,7 @@ const Discount = () => {
       <div>
         <Swiper
           className=" 
-    !pb-[66px]
+    pb-12.5!
 
     [&_.swiper-pagination]:bottom-1.5!
     [&_.swiper-pagination]:flex

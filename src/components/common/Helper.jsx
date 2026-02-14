@@ -263,3 +263,30 @@ export const PolicyData = [
     desc: "You have the right to access, update, or delete your personal information at any time. You can opt out of receiving promotional emails by following the instructions provided in the email. By using our website, you consent to the terms of this Privacy Policy. If you have any questions or concerns, please contact us.",
   },
 ];
+
+export const CommitmentCards = [
+  {
+    id: 1,
+    title: "Free Shipping",
+    desc: "Enjoy the convenience of free shipping on all orders!",
+    icon: "/images/shippingTruck.png",
+  },
+  {
+    id: 2,
+    title: "Unique Packaging",
+    desc: "Experience our commitment to uniqueness with every order.",
+    icon: "/images/uniquePackaging.png",
+  },
+  {
+    id: 3,
+    title: "100% Money Back",
+    desc: "Rest assured with our money-back guarantee at any time.",
+    icon: "/images/moneyBack.png",
+  },
+  {
+    id: 4,
+    title: "Fast Delivery",
+    desc: "Experience swift and efficiently reliable delivery with us.",
+    icon: "/images/fastDelivery.png",
+  },
+];

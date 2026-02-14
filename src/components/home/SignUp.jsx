@@ -40,9 +40,8 @@ const SignUp = () => {
             />
             <Button
               theme="primary"
-              height="h-12"
-              width="w-44"
-              leading="leading-5"
+              height="h-[62px]"
+              width="w-[200px]"
               icons={<RightArrow />}
               className="uppercase tracking-wide"
               type="button"
