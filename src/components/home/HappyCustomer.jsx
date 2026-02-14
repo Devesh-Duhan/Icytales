@@ -1,4 +1,5 @@
 /** @format */
+
 "use client";
 
 import React from "react";
@@ -12,34 +13,36 @@ import { peopleReviews } from "../common/Helper";
 
 const HappyCustomer = () => {
   return (
-    <section className="relative bg-[url('/images/happy-customer-gradient-bg.png')] bg-cover bg-center bg-no-repeat min-h-screen flex items-center">
-      <div className="container mx-auto relative flex items-center justify-between">
-     
+    <section className="relative bg-[url('/images/happy-customer-gradient-bg.png')] bg-cover bg-center bg-no-repeat py-16 md:py-24 lg:py-32 overflow-hidden">
+      <div className="container mx-auto relative flex items-center justify-center">
+        {/* LEFT IMAGE */}
         <Image
           src="/images/customers-left.png"
           width={295}
           height={546}
           alt="Customers Left"
-          className="hidden lg:block"
+          className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2 w-45 2xl:w-[295px]"
         />
 
-      
-        <div className="flex-1 text-center px-4 relative">
-          
+        {/* CONTENT */}
+        <div className="w-full max-w-4xl text-center px-4 relative ">
+          {/* QUOTE BG IMAGE */}
           <Image
-            className="absolute left-1/2 -translate-x-1/2 top-20 opacity-20"
             src="/images/happy-customer-bg-colon.png"
             width={221}
             height={205}
             alt="Quote Background"
+            className="absolute left-85 top-60 max-lg:top-20 duration-300 max-md:hidden"
           />
 
-          <h2 className="heading text-center max-w-2xl mx-auto">
-            Hear from Our <span className="text-pink-500">Happy Ice Cream</span>{" "}
-            Lovers
+          {/* HEADING */}
+          <h2 className="heading max-w-2xl mx-auto relative z-10 pb-34.5 max-lg:pb-0 duration-300 ">
+            Heart from Our{" "}
+            <span className="text-pink-500">Happy Ice Cream</span> Lovers
           </h2>
 
-          <div className="mt-12 max-w-3xl mx-auto">
+          {/* SWIPER */}
+          <div className="mt-10 max-sm:mt-2 max-w-175 w-full mx-auto ">
             <Swiper
               modules={[Pagination, Autoplay]}
               slidesPerView={1}
@@ -51,21 +54,24 @@ const HappyCustomer = () => {
               pagination={{
                 clickable: true,
               }}
-              className="pb-16">
+              className="pb-24! max-md:pb-16!">
               {peopleReviews.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="relative px-6 md:px-16">
-                    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  <div className="px-4 sm:px-8 md:px-16">
+                    <p className="text-gray-700 text-[20px] max-lg:text-[16px] max-md:text-[14px] leading-relaxed">
                       {item.text}
                     </p>
 
-                    <div className="mt-8">
-                      <h4 className="text-pink-500 font-semibold text-lg">
+                    <div className="mt-6 md:mt-8">
+                      <h4 className="text-pink-500 font-semibold text-base md:text-lg">
                         {item.name}
                       </h4>
-                      <p className="text-gray-500 text-sm">{item.role}</p>
 
-                      <div className="flex justify-center mt-3 text-yellow-400 text-lg">
+                      <p className="text-gray-500 text-xs md:text-sm">
+                        {item.role}
+                      </p>
+
+                      <div className="flex justify-center mt-3 text-yellow-400 text-base md:text-lg">
                         ⭐⭐⭐⭐⭐
                       </div>
                     </div>
@@ -76,20 +82,20 @@ const HappyCustomer = () => {
           </div>
         </div>
 
-      
+        {/* RIGHT IMAGE */}
         <Image
           src="/images/customers-right.png"
           width={295}
           height={546}
           alt="Customers Right"
-          className="hidden lg:block"
+          className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 w-[180px] 2xl:w-[295px]"
         />
       </div>
 
-   
-      <style jsx global>{`
+      {/* PAGINATION STYLE */}
+      <style>{`
         .swiper-pagination {
-          bottom: 0px !important;
+          bottom: 10px !important;
         }
         .swiper-pagination-bullet {
           background: #d1d5db;

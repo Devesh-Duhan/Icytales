@@ -27,5 +27,5 @@ body {
 }
 .heading {
   font-family: "Berkshire Swash", serif;
-  @apply text-[60px] leading-16;
+  @apply text-[60px] leading-16 max-lg:text-[30px] max-md:text-[25px] max-sm:text-[20px];
 }

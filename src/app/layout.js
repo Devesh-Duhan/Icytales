@@ -1,5 +1,8 @@
+/** @format */
+
 import { Archivo, Berkshire_Swash } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/common/Header";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -10,7 +13,7 @@ const berkshire = Berkshire_Swash({
   variable: "--font-berkshire-mono",
   subsets: ["latin"],
   weight: ["400"],
-  display:'swap'
+  display: "swap",
 });
 
 export const metadata = {
@@ -22,8 +25,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${archivo.variable} ${berkshire.variable}  antialiased`}
-      >
+        className={`${archivo.variable} ${berkshire.variable}  antialiased`}>
+        <Header />
         {children}
       </body>
     </html>
