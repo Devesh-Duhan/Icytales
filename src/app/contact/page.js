@@ -4,6 +4,7 @@ import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
 import CommonHero from '@/components/common/CommonHero'
 import Link from 'next/link'
+import Map from '@/components/contact/Map'
 
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
           </> }
       />
         <GetInTouch/>
+        <Map/>
         <Footer/>
     </>
   )
