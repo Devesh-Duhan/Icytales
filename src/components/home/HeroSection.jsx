@@ -5,21 +5,21 @@ import { ContactArrow } from "../common/Icons";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden pt-[22px]">
-      <div className="max-w-[1479px] w-full mx-auto px-4">
+    <section className="relative overflow-hidden pt-5.5">
+      <div className="max-w-369.75 w-full mx-auto px-4">
         <div className="flex flex-col justify-center lg:flex-row items-center py-10 lg:py-16 gap-8 lg:gap-0">
           {/* Left Content */}
-          <div className="max-w-[842px] w-full z-10">
+          <div className="max-w-210.5 w-full z-10">
             {/* Welcome Tag */}
             <div className="flex items-center gap-3 mb-5">
-              <span className="w-[40px] h-[2px] bg-darkbrown"></span>
-              <p className="text-[40px] text-[#0F0200] bekshire">
+              <span className="w-10 h-0.5 bg-darkbrown"></span>
+              <p className="text-[40px] text-[#0F0200] berkshire">
                 Welcome to The
               </p>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-[48px] max-w-[842px] w-full md:text-[56px] lg:text-[112px] leading-[108px] bekshire font-normal mb-5 ">
+            <h1 className="text-[48px] max-w-210.5 w-full md:text-[56px] lg:text-[112px] leading-27 berkshire font-normal mb-5 ">
               <span className="bekshire text-darkbrown">Discover </span>
               <span className="bekshire text-pink italic">Sweet</span>
               <br />
@@ -27,7 +27,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-[22px] leading-[30px] text-[#0F0200] max-w-[560.15px] mb-8">
+            <p className="text-[22px] leading-7.5 text-[#0F0200] max-w-[560.15px] mb-8">
               Relish the timeless taste of handcrafted ice cream, made with
               passion and the finest ingredients.
             </p>

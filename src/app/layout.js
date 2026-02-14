@@ -1,5 +1,6 @@
 import { Archivo, Berkshire_Swash } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${berkshire.variable}  antialiased`}
       >
+        <ScrollToTop/>
         {children}
+        
       </body>
     </html>
   );
