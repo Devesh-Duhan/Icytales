@@ -21,7 +21,7 @@ const Journey = () => {
           </article>
           <aside className="max-w-138.25 w-full pt-8.75 pb-12.25">
             <div className="flex flex-col gap-10.5">
-              <h2 className="heading">
+              <h2 className="heading text-darkbrown">
                 Our <span className="text-pink"> Journey</span> Began With a
                 Simple Dream
               </h2>

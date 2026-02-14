@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Favourite = () => {
   return (
-    <div className=' relative bg-[linear-gradient(301.26deg,_#EFD7EF_8%,_#F5F9FC_43%,_#F8EAE1_64%,_#EAF8F9_87%)]  '>
+    <div className=' relative bg-[linear-gradient(301.26deg,_#EFD7EF_8%,_#F5F9FC_43%,_#F8EAE1_64%,_#EAF8F9_87%)] ' >
         <div className='absolute left-0 top-[136px]'>
 <Image
   src="/images/favouritesLeftImg.png"
