@@ -64,6 +64,7 @@ const FavouritesSwiper = () => {
               heading={item.heading}
               title={item.title}
               price={item.price}
+              ratings={item.ratings}
             />
           </SwiperSlide>
         ))}

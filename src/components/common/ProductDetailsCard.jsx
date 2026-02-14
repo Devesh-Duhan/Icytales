@@ -3,7 +3,7 @@ import { AddToCard, AddToWishlist, Star } from "./Icons";
 import Button from "./Button";
 import Link from "next/link";
 
-const ProductDetailsCard = ({ image, heading, title, price }) => {
+const ProductDetailsCard = ({ image, heading, title, ratings, price }) => {
   // Dynamic Background Color Based on Title
   const cardBgColor = title?.toLowerCase().includes("vanilla")
     ? "bg-[rgba(247,242,247,1)]"
@@ -11,6 +11,8 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
     ? "bg-[rgba(255,238,238,1)]"
     : title?.toLowerCase().includes("mint")
     ? "bg-[rgba(246,249,225,1)]"
+     : title?.toLowerCase().includes("peach")
+    ? "rgba(255,239,216,1)"
     : "bg-[rgba(255,250,244,1)]";
 
   return (
@@ -41,7 +43,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
           <div className="flex gap-[3px] items-center">
             <Star />
             <p className="text-sm font-semibold text-darkbrown">
-              4.9/5
+              {ratings}/5
             </p>
           </div>
         </div>

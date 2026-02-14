@@ -142,6 +142,7 @@ export const homeProducts = [
     title: "Rich chocolate ice cream with chunks of brownie.",
     price: "$5.49",
     image: "/images/chocolate.png",
+    ratings:"4.5"
   },
   {
     id: 2,
@@ -149,6 +150,7 @@ export const homeProducts = [
     title: "Strawberry ice cream layered with shortcake.",
     price: "$5.29",
     image: "/images/strawberry.png",
+     ratings:"4.5"
   },
   {
     id: 3,
@@ -156,6 +158,7 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
+     ratings:"4.5"
   },
   {
     id: 4,
@@ -163,6 +166,7 @@ export const homeProducts = [
     title: "Creamy vanilla ice cream topped with cherry.",
     price: "$4.99",
     image: "/images/vanilla.png",
+     ratings:"4.5"
   },
   {
     id: 5,
@@ -170,6 +174,7 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
+     ratings:"4.5"
   },
 ];
  export const homeCategories =[

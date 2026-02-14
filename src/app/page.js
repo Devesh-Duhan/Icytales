@@ -13,10 +13,10 @@ import SummerSpecial from "@/components/home/SummerSpecial";
 export default function Home() {
   return (
     <>
-     {/* <Explore/>
+     {/* <Explore/> */}
      <Favourite/>
     
-     <SignUp/> */}
+     {/* <SignUp/> */}
      {/* <Categories/> */}
     </>
   );
