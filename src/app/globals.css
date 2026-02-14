@@ -12,12 +12,14 @@
   --color-lightpurple: #cfb6e2;
   --color-lightgray: #787878;
   --color-gray: #e3e4e5;
-
   --font-archivo: var(--font-archivo);
   --font-berkshire: var(--font-berkshire-mono);
 }
 .container {
   @apply w-full max-w-291 px-3 mx-auto;
+}
+.outer-container {
+  @apply w-full max-w-480 px-3 mx-auto;
 }
 
 body {
