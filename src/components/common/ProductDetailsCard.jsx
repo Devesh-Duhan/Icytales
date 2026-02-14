@@ -62,6 +62,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
             height="h-[46px]"
             width="w-[46px]"
             icons={<AddToCard/>}
+          
             
             type="button"
             

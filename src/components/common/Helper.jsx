@@ -42,7 +42,7 @@ export const teamData = [
   },
 ];
 
-export const products = [
+export const homeProducts = [
   {
     id: 1,
     heading: " Chocolate Brownie Sundae",
@@ -79,3 +79,34 @@ export const products = [
     image: "/images/mint.png",
   },
 ];
+ export const homeCategories =[
+  { 
+    id: 1,
+    image:"/images/homeCategories1.png",
+    text:"Sundaes"
+
+
+  },
+   { 
+    id: 2,
+    image:"/images/homeCategories2.png",
+    text:"Ice Cream Cones"
+
+
+  },
+  { 
+    id: 3,
+    image:"/images/homeCategories3.png",
+    text:"Milkshakes"
+
+
+  },
+  { 
+    id: 4,
+    image:"/images/homeCategories4.png",
+    text:"Seasonal Flavors"
+
+
+  },
+  
+ ]

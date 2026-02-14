@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 
 import ProductDetailsCard from "../common/ProductDetailsCard";
-import { products } from "./Helper";
+import { homeProducts, products } from "./Helper";
 
 
 
@@ -51,7 +51,7 @@ const FavouritesSwiper = () => {
           1280: { slidesPerView: 4 },
         }}
       >
-        {products.map((item) => (
+        {homeProducts.map((item) => (
           <SwiperSlide key={item.id}>
             <ProductDetailsCard
               image={
