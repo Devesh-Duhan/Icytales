@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <header className="py-3 relative z-50">
-      <div className="max-w-[1449px] w-full mx-auto px-4">
+      <div className="max-w-362.25 w-full mx-auto px-4">
         <nav className="flex items-center justify-between" ref={menuRef}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 outline-none shrink-0">
@@ -60,7 +60,7 @@ const Header = () => {
               alt="IcyTales"
               width={154}
               height={50}
-              className="h-[40px] lg:h-[50px] w-auto"
+              className="h-10 lg:h-12.5 w-auto"
             />
           </Link>
 
@@ -107,8 +107,8 @@ const Header = () => {
             </div>
 
             {/* Right Section - Search, Notification & Contact */}
-            <div className="flex items-center gap-[52px]">
-              <div className="flex gap-[32px] pl-[17.86px]">
+            <div className="flex items-center gap-13">
+              <div className="flex gap-8 pl-[17.86px]">
                 {/* Search Icon */}
                 <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +129,7 @@ const Header = () => {
               <div>
                 <Link
                   href="/contact"
-                  className="inline-flex gap-[19.67px] items-center px-[26.47px] py-[17px] bg-gradient-to-r from-[#f83d8e] to-[#f9825c] text-white text-[16px] font-bold rounded-full hover:shadow-lg hover:shadow-pink/30 transition-all duration-300 hover:scale-105"
+                  className="inline-flex gap-[19.67px] items-center px-[26.47px] py-4.25 bg-linear-to-r from-[#f83d8e] to-[#f9825c] text-white text-[16px] font-bold rounded-full hover:shadow-lg hover:shadow-pink/30 transition-all duration-300 hover:scale-105"
                 >
                   Contact Us
                   <ContactArrow />
@@ -162,18 +162,18 @@ const Header = () => {
               aria-label="Toggle menu"
             >
               <span
-                className={`block w-6 h-[2px] bg-darkbrown rounded-full transition-all duration-300 ${
-                  mobileMenuOpen ? "rotate-45 translate-y-[6px]" : ""
+                className={`block w-6 h-0.5 bg-darkbrown rounded-full transition-all duration-300 ${
+                  mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
                 }`}
               />
               <span
-                className={`block w-6 h-[2px] bg-darkbrown rounded-full mt-1 transition-all duration-300 ${
+                className={`block w-6 h-0.5 bg-darkbrown rounded-full mt-1 transition-all duration-300 ${
                   mobileMenuOpen ? "opacity-0 scale-0" : ""
                 }`}
               />
               <span
-                className={`block w-6 h-[2px] bg-darkbrown rounded-full mt-1 transition-all duration-300 ${
-                  mobileMenuOpen ? "-rotate-45 -translate-y-[6px]" : ""
+                className={`block w-6 h-0.5 bg-darkbrown rounded-full mt-1 transition-all duration-300 ${
+                  mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
                 }`}
               />
             </button>
@@ -191,7 +191,7 @@ const Header = () => {
 
       {/* ========== MOBILE/TABLET SLIDE-IN MENU ========== */}
       <div
-        className={`fixed top-0 right-0 h-full w-[300px] sm:w-[360px] bg-white z-50 lg:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
+        className={`fixed top-0 right-0 h-full w-75 sm:w-90 bg-white z-50 lg:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -277,7 +277,7 @@ const Header = () => {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-3 w-full py-4 bg-gradient-to-r from-[#f83d8e] to-[#f9825c] text-white text-[16px] font-bold rounded-full hover:shadow-lg hover:shadow-pink/30 transition-all duration-300"
+              className="flex items-center justify-center gap-3 w-full py-4 bg-linear-to-r from-[#f83d8e] to-[#f9825c] text-white text-[16px] font-bold rounded-full hover:shadow-lg hover:shadow-pink/30 transition-all duration-300"
             >
               Contact Us
               <ContactArrow />

@@ -1,7 +1,5 @@
 /** @format */
 "use client";
-
-import Image from "next/image";
 import React from "react";
 import Button from "../common/Button";
 import { ArrowIcon } from "../common/Icons";
@@ -26,7 +24,7 @@ const SummerSpecial = () => {
               className="  flex gap-[17.65px]"
               type="button">
               Get This Deal
-              <ArrowIcon />
+              {/* <ArrowIcon /> */}
             </Button>
             <p className="text-white">Use code: SUMMER50 at checkout.</p>
           </div>

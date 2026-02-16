@@ -9,6 +9,7 @@ const Button = ({
   theme,
   icons,
   children,
+  iconposition,
   className = "",
   ...props
 }) => {
@@ -23,7 +24,11 @@ const Button = ({
     <button
       className={`
         ${themeClass}
+<<<<<<< HEAD
         text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
+=======
+        text-white font-semibold rounded-full group
+>>>>>>> b5885074de04480cfa6b717b25f81854409a78d2
         flex items-center justify-center duration-300 cursor-pointer 
         ${height || ""}
         ${width || ""}

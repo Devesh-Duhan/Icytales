@@ -100,6 +100,7 @@ export const NavLinks = [
     path: "/faqs",
   },
 ];
+
 export const testimonialData = [
   {
     id: 1,
@@ -134,8 +135,13 @@ export const testimonialData = [
     text: "Quisuam est rui dolorem ipsum rui do sit amet, consectetur, adipise velit seu non numquam eiusm temora incidunt aut labore siner...",
   },
 ];
+export const ContactDetails = [
+  {image:"/images/contactlocation.png",heading:"Our Location",subheading:["121 King Street, Melbourne Victoria 3000 Australia"]},
+  {image:"/images/contactmobile.png",heading:"Phone Number",subheading:["(+61 3 8376 6284)","(+800 2345 6789)"]},
+  {image:"/images/contactpage-email.png",heading:"Email us at",subheading:["info@icedelights.com","icedelights@gmail.com"]},
+]
 
-export const products = [
+export const homeProducts = [
   {
     id: 1,
     heading: " Chocolate Brownie Sundae",

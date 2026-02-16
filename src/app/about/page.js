@@ -1,23 +1,22 @@
-import React from 'react'
-
-import Hero from './Hero'
-import Journey from './Journey'
-import Misson from './Misson'
-import Statics from './Statics'
-import Team from './Team'
-import SignUp from '@/components/home/SignUp'
+import React from "react";
+import Team from "./Team";
+import SignUp from "@/components/home/SignUp";
+import CommonHero from "@/components/common/CommonHero";
+import Journey from "./Journey";
+import Misson from "./Misson";
+import Statics from "./Statics";
 
 const page = () => {
   return (
     <div>
-        <Hero/>
-        <Journey/>
-        <Misson/>
-        <Statics/>
-        <Team/>
-        <SignUp/>
+      <CommonHero title="About Us" />
+      <Journey />
+      <Misson/>
+      <Statics/>
+      <Team/>
+      <SignUp />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
