@@ -38,7 +38,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
             {heading}
           </h3>
 
-          <div className="flex gap-[3px] items-center">
+          <div className="flex gap-0.75 items-center">
             <Star />
             <p className="text-sm font-semibold text-darkbrown">
               4.9/5

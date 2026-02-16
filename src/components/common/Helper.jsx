@@ -148,6 +148,7 @@ export const homeProducts = [
     title: "Rich chocolate ice cream with chunks of brownie.",
     price: "$5.49",
     image: "/images/chocolate.png",
+    
   },
   {
     id: 2,
@@ -155,6 +156,7 @@ export const homeProducts = [
     title: "Strawberry ice cream layered with shortcake.",
     price: "$5.29",
     image: "/images/strawberry.png",
+   
   },
   {
     id: 3,
@@ -162,6 +164,7 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
+    
   },
   {
     id: 4,
@@ -169,6 +172,7 @@ export const homeProducts = [
     title: "Creamy vanilla ice cream topped with cherry.",
     price: "$4.99",
     image: "/images/vanilla.png",
+   
   },
   {
     id: 5,
@@ -176,6 +180,7 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
+   
   },
 ];
 export const Discountproducts = [
@@ -184,35 +189,45 @@ export const Discountproducts = [
     heading: " Strawberry Sundae",
     title: "Strawberry ice cream with fresh strawberries.",
     price: "$5.99",
-    image: "/images/chocolate.png",
+    image: "/images/strawberrySudane.png",
+    discount: "28% OFF",
+    off : "$12.99",
   },
   {
     id: 2,
-    heading: "Strawberry Shortcake",
-    title: "Strawberry ice cream layered with shortcake.",
-    price: "$5.29",
-    image: "/images/strawberry.png",
+    heading: "Chocolate Chip Cookie Cone",
+    title: "Chocolate chip cookie dough ice cream in a cone.",
+    price: "$4.49",
+    image: "/images/chocolateCone.png",
+    discount: "22% OFF",
+    off: "$13.99",
   },
   {
     id: 3,
-    heading: "Mint Chocolate Chip Cone",
-    title: "Refreshing mint ice cream with chocolate chips.",
-    price: "$3.99",
-    image: "/images/mint.png",
+    heading: "Rocky Road Sundae",
+    title: "Marshmallow and nutty rockyroad ice cream.",
+    price: "$5.69",
+    image: "/images/rockyRoadSundae.png",
+    discount: "20% OFF",
+    off: "$14.99",
   },
   {
     id: 4,
-    heading: "Classic Vanilla Ice Cream",
-    title: "Creamy vanilla ice cream topped with cherry.",
-    price: "$4.99",
-    image: "/images/vanilla.png",
+    heading: "Peach Melba Sundae",
+    title: "Peach ice cream topped with raspberry sauce",
+    price: "$5.39",
+    image: "/images/peachMelbaSundae.png",
+    discount: "16% OFF",
+    off: "$15.99",
   },
   {
     id: 5,
-    heading: "Mint Chocolate Chip Cone",
-    title: "Refreshing mint ice cream with chocolate chips.",
-    price: "$3.99",
-    image: "/images/mint.png",
+    heading: " Strawberry Sundae",
+    title: "Strawberry ice cream with fresh strawberries.",
+    price: "$5.99",
+    image: "/images/peachMelbaSundae.png",
+    discount: "28% OFF",
+    off: "$12.99",
   },
 ];
 export const termsData = [
@@ -294,5 +309,43 @@ export const CommitmentCards = [
     title: "Fast Delivery",
     desc: "Experience swift and efficiently reliable delivery with us.",
     icon: "/images/fastDelivery.png",
+  },
+];
+export const faqs = [
+  {
+    id: 1,
+    question: "Do you offer dairy-free or vegan options?",
+    answer:
+      "Yes! We offer a variety of dairy-free and vegan ice cream options made with plant-based ingredients.",
+  },
+  {
+    id: 2,
+    question: "Can I order ice cream online?",
+    answer:
+      "Absolutely! You can order directly from our website and get it delivered to your doorstep.",
+  },
+  {
+    id: 3,
+    question: "What ingredients do you use in your ice cream?",
+    answer:
+      "We use premium quality milk, fresh fruits, natural flavors, and high-quality chocolate.",
+  },
+  {
+    id: 4,
+    question: "Do you have nutritional information available?",
+    answer:
+      "Yes, nutritional information is available on product pages and packaging.",
+  },
+  {
+    id: 5,
+    question: "Do you have gluten-free ice cream?",
+    answer:
+      "Yes, many of our flavors are gluten-free. Please check product labels for confirmation.",
+  },
+  {
+    id: 6,
+    question: "Can I book your store for private events?",
+    answer:
+      "Yes! We host birthday parties, celebrations, and private tasting events.",
   },
 ];
