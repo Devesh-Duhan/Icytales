@@ -23,7 +23,7 @@ const Button = ({
     <button
       className={`
         ${themeClass}
-        text-white font-semibold rounded-full
+        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
         flex items-center justify-center duration-300 cursor-pointer 
         ${height || ""}
         ${width || ""}

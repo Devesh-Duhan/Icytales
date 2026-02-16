@@ -13,21 +13,21 @@ import "swiper/css/pagination";
 
 const ClientRatings = () => {
   return (
-    <section className="container py-38.25">
+    <section className="container py-38.25 max-lg:py-28 max-md:py-16 max-sm:py-8">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center">
         <h2 className="heading max-w-145 w-full text-center text-darkbrown">
           Hear From Our <span className="text-pink">Gelato</span> Enthusiasts
         </h2>
-        <p className="text-lightbrown pt-5 leading-6.5 text-xl">
+        <p className="text-lightbrown pt-5 leading-6.5 text-xl text-center  max-md:leading-4 max-lg:text-lg max-md:text-base max-sm:text-sm max-lg:pt-5 max-md:pt-5 max-sm:pt-3">
           Read testimonials from those who have enjoyed our artisan gelato.
         </p>
       </div>
 
       {/* Swiper */}
-      <div className="pt-12.5">
+      <div className="pt-12.5 max-lg:pt-10 max-md:pt-6 max-sm:pt-3">
         <Swiper
-          className=" pb-15! [&_.swiper-pagination]:bottom-1.5!
+          className=" pb-15! max-lg:pb-12! max-md:pb-8!  [&_.swiper-pagination]:bottom-1.5!
     [&_.swiper-pagination]:flex
     [&_.swiper-pagination]:justify-center
     [&_.swiper-pagination]:items-center
@@ -55,12 +55,11 @@ const ClientRatings = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-
         >
           {testimonialData.map((item) => (
             <SwiperSlide key={item.id}>
               <div
-                className="bg-white rounded-[20px] p-[50px_32px_51px_35px] relative
+                className="bg-white rounded-[20px] p-[50px_32px_51px_35px] max-lg:p-[40px_26px_40px_25px]  max-md:p-[30px_16px_30px_18px]relative
                 shadow-[0px_2px_73px_2px_#0000000D]
                 border-b-2 border-pink transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(236,72,153,0.35)]"
@@ -74,7 +73,7 @@ const ClientRatings = () => {
                 />
 
                 {/* Text */}
-                <p className="text-lightbrown pt-5.75 leading-6">{item.text}</p>
+                <p className="text-lightbrown pt-5.75 leading-6 max-md:leading-4 max-md:text-sm max-sm:text-xs">{item.text}</p>
 
                 {/* Bottom User */}
                 <div className="flex gap-4.75 pt-7.5">
