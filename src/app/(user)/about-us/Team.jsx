@@ -4,13 +4,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { teamData } from "@/components/common/Helper";
-import {
-  Facebookicon,
-  Instaicon,
-  OurTeamNext,
-  OurTeamPrev,
-  Youtubeicon,
-} from "@/components/common/Icons";
+// import {
+//   Facebookicon,
+//   Instaicon,
+//   OurTeamNext,
+//   OurTeamPrev,
+//   Youtubeicon,
+// } from "@/components/common/Icons";
 
 import Image from "next/image";
 import React from "react";

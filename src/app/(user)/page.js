@@ -12,22 +12,19 @@ export default function Home() {
   return (
     <>
       {/* Shared gradient parent for Header + Hero */}
-      <div className="bg-[url(/images/heroBg.png)] bg-cover bg-no-repeat">
-        <Header/>
+      <div className="bg-[url(/images/heroBg.png)] -mt-21 pt-21 bg-cover bg-no-repeat">
         <HeroSection />
-        
         <ScrollToTop/>
       </div>
      {/* <Explore/>
      <Favourite/>
-    
      <SignUp/> */}
      {/* <Categories/> */}
       <Explore />
       {/* <Favourite /> */}
       <SummerSpecial />
       <SignUp />
-      <Footer/>
+      
     </>
   );
 }

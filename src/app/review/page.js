@@ -1,12 +1,12 @@
 import React from 'react'
-import Hero from './Hero'
-import ClientRatings from './ClientRatings'
+
+import CommonHero from '@/components/common/CommonHero'
 
 const page = () => {
   return (
     <div>
-        <Hero/>
-        <ClientRatings/>
+       <CommonHero/>
+        {/* <ClientRatings/> */}
     </div>
   )
 }

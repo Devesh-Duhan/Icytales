@@ -73,7 +73,9 @@ const ClientRatings = () => {
                 />
 
                 {/* Text */}
-                <p className="text-lightbrown pt-5.75 leading-6 max-md:leading-4 max-md:text-sm max-sm:text-xs">{item.text}</p>
+                <p className="text-lightbrown pt-5.75 leading-6 max-md:leading-4 max-md:text-sm max-sm:text-xs">
+                  {item.text}
+                </p>
 
                 {/* Bottom User */}
                 <div className="flex gap-4.75 pt-7.5">
