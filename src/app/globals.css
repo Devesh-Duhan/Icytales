@@ -1,3 +1,5 @@
+/** @format */
+
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Berkshire+Swash&display=swap");
 
 @import "tailwindcss";
@@ -28,6 +30,6 @@ body {
   font-family: "Berkshire Swash", serif;
   @apply text-[60px] leading-16;
 }
-.bekshire{
+.berkshire {
   font-family: "Berkshire Swash", serif;
 }

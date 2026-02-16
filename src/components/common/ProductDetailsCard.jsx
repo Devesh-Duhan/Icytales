@@ -14,7 +14,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
     : "bg-[rgba(255,250,244,1)]";
 
   return (
-    <div className="bg-white p-[11px] rounded-[12px] shadow-md  mx-auto">
+    <div className="bg-white p-2.75 rounded-xl shadow-md  mx-auto">
       
       {/* Image Section */}
       <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
