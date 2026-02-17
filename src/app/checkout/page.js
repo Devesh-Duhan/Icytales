@@ -1,12 +1,10 @@
+import Form from '@/components/checkout/Form'
 import React from 'react'
-import Hero from './Hero'
-import OurTeam from './OurTeam'
 
 const page = () => {
   return (
     <div>
-        <Hero/>
-        <OurTeam/>
+        <Form/>
     </div>
   )
 }

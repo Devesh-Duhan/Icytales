@@ -51,7 +51,7 @@ const Header = () => {
 
   return (
     <header className="py-3 relative z-50">
-      <div className="max-w-362.25 w-full mx-auto px-4">
+      <div className=" max-w-362.5 w-full mx-auto px-4">
         <nav className="flex items-center justify-between" ref={menuRef}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1 outline-none shrink-0">

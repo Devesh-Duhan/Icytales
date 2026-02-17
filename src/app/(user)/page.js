@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Shared gradient parent for Header + Hero */}
-      <div className="bg-[url(/images/heroBg.png)] -mt-21 pt-21 bg-cover bg-no-repeat">
+      <div className="bg-[linear-gradient(120deg,#EFD7EF,#F5F9FC,#F8EAE1,#EAF8F9)] -mt-21 pt-21 bg-cover bg-no-repeat">
         <HeroSection />
         <ScrollToTop/>
       </div>

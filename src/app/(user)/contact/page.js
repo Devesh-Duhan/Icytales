@@ -9,7 +9,7 @@ import Map from '@/components/contact/Map'
 const page = () => {
   return (
     <>
-    <Header/>
+   
     <CommonHero
         title="Contact Us"
         breadcrumb={
@@ -27,7 +27,7 @@ const page = () => {
       />
         <GetInTouch/>
         <Map/>
-        <Footer/>
+        
     </>
   )
 }
