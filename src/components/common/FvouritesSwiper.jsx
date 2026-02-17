@@ -12,6 +12,9 @@ import { homeProducts, products } from "./Helper";
 
 
 const FavouritesSwiper = () => {
+  const favouriteProducts = homeProducts.filter(
+  (item) => item.type === "favourite"
+);
   return (
     <div>
       <Swiper
@@ -51,7 +54,7 @@ const FavouritesSwiper = () => {
           1280: { slidesPerView: 4 },
         }}
       >
-        {homeProducts.map((item) => (
+        {favouriteProducts.map((item) => (
           <SwiperSlide key={item.id}>
             <ProductDetailsCard
               image={

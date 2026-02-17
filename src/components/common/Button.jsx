@@ -9,6 +9,7 @@ const Button = ({
   theme,
   icons,
   children,
+  iconposition,
   className = "",
   ...props
 }) => {
@@ -23,14 +24,23 @@ const Button = ({
     <button
       className={`
         ${themeClass}
+
+        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
+
         text-white font-semibold rounded-full group
+
+
+        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
+
         flex items-center justify-center duration-300 cursor-pointer 
         ${height || ""}
+        ${iconposition || ""}
         ${width || ""}
         ${leading || ""}
         ${className}
       `}
-      {...props}>
+      {...props}
+    >
       {children}
       {icons && <span className="ml-2 ">{icons}</span>}
     </button>

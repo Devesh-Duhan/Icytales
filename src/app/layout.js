@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/common/Header";
 import { WishlistProvider } from "@/components/context/WishlistContext";
 
+
 const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
@@ -26,11 +27,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${archivo.variable} ${berkshire.variable}  antialiased`}>
-         <WishlistProvider>
-          {/* <Header/> */}
-          {children}
-        </WishlistProvider>
+        className={`${archivo.variable} ${berkshire.variable}  antialiased`}
+      >
+      
+        {children}
+        
       </body>
     </html>
   );
