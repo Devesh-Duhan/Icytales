@@ -11,15 +11,15 @@ export default function ProductTabs() {
   ];
 
   return (
-    <section className="container  pt-17.5">
+    <section className="container  pt-17.5 max-md:pt-14 max-sm:pt-8">
       {/* Tabs Header */}
       <div className="border-b border-[#E3E4E5]">
-        <div className="flex gap-10.5">
+        <div className="flex gap-10.5 max-md:gap-7 max-sm:gap-5">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-5.5 cursor-pointer  font-bold relative text-lg transition-all duration-300
+              className={`pb-5.5 max-md:pb-3 max-sm:pb-2 max-md:text-base cursor-pointer max-md:font-semibold font-bold relative text-lg transition-all duration-300
                 ${
                   activeTab === tab.id
                     ? "text-pink"
@@ -38,10 +38,10 @@ export default function ProductTabs() {
       </div>
 
       {/* Tabs Content */}
-      <div className="pt-8.75 pb-11.75 text-lightgray border-b border-[#E3E4E5] leading-7 max-w-274.5 w-full">
+      <div className="pt-8.75 pb-11.75 max-md:py-6 max-sm:py-4 text-lightgray border-b border-[#E3E4E5] leading-7 max-md:leading-5 max-md:text-sm max-sm:text-xs max-sm:leading-4  max-w-274.5 w-full">
         {/* DESCRIPTION */}
         {activeTab === "description" && (
-          <div className="space-y-6.5">
+          <div className="space-y-6.5 max-md:space-y-4 max-sm:space-y-2">
             <p>
               Ratione volurtatem serui nesciunt neaue porro quisquam est, qui
               dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
@@ -85,24 +85,24 @@ export default function ProductTabs() {
 
         {/* REVIEWS */}
         {activeTab === "reviews" && (
-          <div className="space-y-6">
+          <div className="space-y-6 max-md:space-y-4 max-sm:space-y-2">
             <div className="border-b pb-4">
               <p className="font-semibold text-gray-800">Rahul ⭐⭐⭐⭐⭐</p>
-              <p className="text-sm mt-1">
+              <p className="text-sm max-sm:text-xs mt-1">
                 Best vanilla ice cream I have ever tasted. Super creamy!
               </p>
             </div>
 
             <div className="border-b pb-4">
               <p className="font-semibold text-gray-800">Priya ⭐⭐⭐⭐</p>
-              <p className="text-sm mt-1">
+              <p className="text-sm max-sm:text-xs mt-1">
                 Very good quality. Packaging was also nice.
               </p>
             </div>
 
             <div>
               <p className="font-semibold text-gray-800">Amit ⭐⭐⭐⭐⭐</p>
-              <p className="text-sm mt-1">
+              <p className="text-sm max-sm:text-xs mt-1">
                 Perfect dessert after dinner. Will buy again.
               </p>
             </div>
