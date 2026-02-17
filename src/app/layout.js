@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${berkshire.variable}  antialiased`}
       >
-      
+       
         {children}
         
       </body>

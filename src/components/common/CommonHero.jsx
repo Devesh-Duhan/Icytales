@@ -18,7 +18,7 @@ const CommonHero = () => {
       <div className="px-8.5 text-lg max-lg:px-7 max-md:px-5 max-lg:py-4 max-md:py-3  max-sm:py-1 py-4.5 rounded-[35px] bg-white shadow-[0px_2px_73px_2px_#0000000D] max-sm:px-3.5 max-md:text-base flex max-lg:gap-6 max-md:gap-4 max-sm:gap-3 gap-8.5">
         <>
           <Link href="/">
-            <span>Home</span>
+            <span className="text-pink">Home</span>
           </Link>
 
           <span>/</span>

@@ -133,7 +133,7 @@ const Footer = () => {
       </div>
       <div className="max-w-285.5 border-[#FFFFFF26] border-t w-full mx-auto px-4 mt-22.5">
         <p className="text-[10px] sm:text-[12px] text-[#CFB6E2] text-center py-4.5">
-          Copyright © 2024 BlackRise Themes Inc All rights reserved.
+           Copyright © {new Date().getFullYear()} BlackRise Themes Inc. All rights reserved.
         </p>
       </div>
     </div>

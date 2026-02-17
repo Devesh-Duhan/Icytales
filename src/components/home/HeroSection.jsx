@@ -51,7 +51,7 @@ const HeroSection = () => {
           </div>
         
       </div>
-      <div className="mt-0 lg:-mt-20  "><Image src="/images/homewave.png" alt="wave" width={1920} height={125}/></div>
+      <div className="mt-0 lg:-mt-20 mx-auto flex justify-center "><Image src="/images/homewave.png" alt="wave" width={1920} height={125}/></div>
     </section>
   );
 };
