@@ -191,7 +191,7 @@ export const Discountproducts = [
     price: "$5.99",
     image: "/images/strawberrySudane.png",
     discount: "28% OFF",
-    off : "$12.99",
+    off: "$12.99",
   },
   {
     id: 2,
@@ -221,13 +221,13 @@ export const Discountproducts = [
     off: "$15.99",
   },
   {
-    id: 5,
-    heading: " Strawberry Sundae",
-    title: "Strawberry ice cream with fresh strawberries.",
-    price: "$5.99",
-    image: "/images/peachMelbaSundae.png",
-    discount: "28% OFF",
-    off: "$12.99",
+    id: 2,
+    heading: "Chocolate Chip Cookie Cone",
+    title: "Chocolate chip cookie dough ice cream in a cone.",
+    price: "$4.49",
+    image: "/images/chocolateCone.png",
+    discount: "22% OFF",
+    off: "$13.99",
   },
 ];
 export const termsData = [
@@ -348,4 +348,27 @@ export const faqs = [
     answer:
       "Yes! We host birthday parties, celebrations, and private tasting events.",
   },
+];
+export const NewProducts = [
+  { id:1,
+  productimage: "/images/fourColumnFirstcard.png" },
+  { id:2,
+  productimage: "/images/fourColumnSecondCard.png" },
+  { id:3,
+  productimage: "/images/fourColumnThirdCard.png" },
+  { id:4,
+  productimage: "/images/fourColumnForthCard.png" },
+  { id:5,
+  productimage: "/images/fourColumnFifthCard.png" },
+  { id:6,
+  productimage: "/images/fourColumnSixthCard.png" },
+  { id:7,
+  productimage: "/images/fourColumnSeventhCard.png" },
+  { id:8,
+  productimage: "/images/fourColumnEighthCard.png" },
+];
+export const MoreProducts = [
+  { id: 1, productimage: "/images/fourColumnFirstcard.png" },
+  { id: 8, productimage: "/images/fourColumnEighthCard.png" },
+  { id: 4, productimage: "/images/fourColumnForthCard.png" },
 ];

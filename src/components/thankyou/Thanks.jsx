@@ -16,10 +16,10 @@ const Thanks = () => {
             height={165}
           />
         </div>
-        <h2 className="text-[112px] text-[#212529] berkshire pt-10.5 ">
+        <h2 className="text-[90px] sm:text-[112px] text-[#212529] berkshire pt-10.5 ">
           Thank You!
         </h2>
-        <p className="text-[22px] text-lightbrown max-w-185 w-full text-center pt-[28px]">
+        <p className="text-[22px] text-lightbrown max-w-185 w-full text-center pt-7">
           We're delighted you've decided to treat yourself to our delectable ice
           creams. Your order has been received and is now being prepared with
           care.

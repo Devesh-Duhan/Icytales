@@ -25,17 +25,23 @@ const Button = ({
       className={`
         ${themeClass}
 <<<<<<< HEAD
+<<<<<<< HEAD
         text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
 =======
         text-white font-semibold rounded-full group
 >>>>>>> b5885074de04480cfa6b717b25f81854409a78d2
+=======
+        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
+>>>>>>> 874c6ace320ad509340a227f22004437012110bd
         flex items-center justify-center duration-300 cursor-pointer 
         ${height || ""}
+        ${iconposition || ""}
         ${width || ""}
         ${leading || ""}
         ${className}
       `}
-      {...props}>
+      {...props}
+    >
       {children}
       {icons && <span className="ml-2 ">{icons}</span>}
     </button>

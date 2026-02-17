@@ -1,18 +1,9 @@
 import { Archivo, Berkshire_Swash } from "next/font/google";
-import "./globals.css";
+import ScrollToTop from "@/components/common/ScrollToTop";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 
-const archivo = Archivo({
-  variable: "--font-archivo",
-  subsets: ["latin"],
-});
-
-const berkshire = Berkshire_Swash({
-  variable: "--font-berkshire-mono",
-  subsets: ["latin"],
-  weight: ["400"],
-  display:'swap'
-});
 
 export const metadata = {
   title: "Icy Tales",
@@ -23,10 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${archivo.variable} ${berkshire.variable}  antialiased`}
+        className={`  antialiased`}
       >
-      
+       
+        <ScrollToTop/>
         {children}
+        <Footer/>
         
       </body>
     </html>
