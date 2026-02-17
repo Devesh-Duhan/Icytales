@@ -59,47 +59,47 @@ export const teamData = [
     image: "/images/laurenTrout.png",
   },
 ];
-export const NavLinks = [
-  {
-    label: "Home",
-    path: "/",
-    isActive: true,
-    hasDropdown: true,
-    dropdownItems: [
-      { label: "Home 1", path: "/" },
-      { label: "Home 2", path: "/" },
-      { label: "Home 3", path: "/" },
-    ],
-  },
-  {
-    label: "About Us",
-    path: "/about",
-  },
-  {
-    label: "Pages",
-    path: "/pages",
-    hasDropdown: true,
-    dropdownItems: [
-      { label: "Our Team", path: "/team" },
-      { label: "Pricing", path: "/pricing" },
-      { label: "Gallery", path: "/gallery" },
-    ],
-  },
-  {
-    label: "Blog",
-    path: "/blog",
-    hasDropdown: true,
-    dropdownItems: [
-      { label: "Blog Grid", path: "/blog" },
-      { label: "Blog List", path: "/blog" },
-      { label: "Blog Details", path: "/blog" },
-    ],
-  },
-  {
-    label: "Faq's",
-    path: "/faqs",
-  },
-];
+// export const NavLinks = [
+//   {
+//     label: "Home",
+//     path: "/",
+//     isActive: true,
+//     hasDropdown: true,
+//     dropdownItems: [
+//       { label: "Home 1", path: "/" },
+//       { label: "Home 2", path: "/" },
+//       { label: "Home 3", path: "/" },
+//     ],
+//   },
+//   {
+//     label: "About Us",
+//     path: "/about",
+//   },
+//   {
+//     label: "Pages",
+//     path: "/pages",
+//     hasDropdown: true,
+//     dropdownItems: [
+//       { label: "Our Team", path: "/team" },
+//       { label: "Pricing", path: "/pricing" },
+//       { label: "Gallery", path: "/gallery" },
+//     ],
+//   },
+//   {
+//     label: "Blog",
+//     path: "/blog",
+//     hasDropdown: true,
+//     dropdownItems: [
+//       { label: "Blog Grid", path: "/blog" },
+//       { label: "Blog List", path: "/blog" },
+//       { label: "Blog Details", path: "/blog" },
+//     ],
+//   },
+//   {
+//     label: "Faq's",
+//     path: "/faqs",
+//   },
+// ];
 export const testimonialData = [
   {
     id: 1,
@@ -142,7 +142,8 @@ export const homeProducts = [
     title: "Rich chocolate ice cream with chunks of brownie.",
     price: "$5.49",
     image: "/images/chocolate.png",
-    ratings:"4.5"
+    ratings:"4.5",
+    type: "bestSeller",
   },
   {
     id: 2,
@@ -150,7 +151,9 @@ export const homeProducts = [
     title: "Strawberry ice cream layered with shortcake.",
     price: "$5.29",
     image: "/images/strawberry.png",
-     ratings:"4.5"
+     ratings:"4.2",
+      type: "favourite",
+
   },
   {
     id: 3,
@@ -158,7 +161,8 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
-     ratings:"4.5"
+     ratings:"4.1",
+      type: "favourite",
   },
   {
     id: 4,
@@ -166,7 +170,9 @@ export const homeProducts = [
     title: "Creamy vanilla ice cream topped with cherry.",
     price: "$4.99",
     image: "/images/vanilla.png",
-     ratings:"4.5"
+     ratings:"4.7",
+     type: "bestSeller",
+
   },
   {
     id: 5,
@@ -174,8 +180,30 @@ export const homeProducts = [
     title: "Refreshing mint ice cream with chocolate chips.",
     price: "$3.99",
     image: "/images/mint.png",
-     ratings:"4.5"
+     ratings:"4.8",
+     type: "bestSeller",
   },
+   {
+    id: 6,
+    heading: "Mint Chocolate Chip Cone",
+    title: "Refreshing mint ice cream with chocolate chips.",
+    price: "$3.99",
+    image: "/images/mint.png",
+     ratings:"4.6",
+      type: "bestSeller",
+  },
+  {
+    id: 7,
+    heading: "Strawberry Shortcake",
+    title: "Strawberry ice cream layered with shortcake.",
+    price: "$5.29",
+    image: "/images/strawberry.png",
+     ratings:"4.6",
+      type: "bestSeller",
+      
+
+  },
+
 ];
  export const homeCategories =[
   { 
@@ -326,3 +354,83 @@ export const CommitmentCards = [
     icon: "/images/fastDelivery.png",
   },
 ];
+export const peopleReviews = [
+    {
+      id: 1,
+      name: "Kevin Andrew",
+      role: "Happy Customer",
+      text: "Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do eiusmod tempor incididunt.",
+    },
+    {
+      id: 2,
+      name: "Sarah John",
+      role: "Ice Cream Lover",
+      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    },
+    {
+      id: 3,
+      name: "Michael Smith",
+      role: "Sweet Fan",
+      text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+    },
+  ];
+export const NavLinks = [
+  {
+    label: "Home",
+    path: "/",
+    isActive: true,
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Home 1", path: "/" },
+      { label: "Home 2", path: "/" },
+      { label: "Home 3", path: "/" },
+    ],
+  },
+  {
+    label: "About Us",
+    path: "/about",
+  },
+  {
+    label: "Pages",
+    path: "/pages",
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Our Team", path: "/team" },
+      { label: "Pricing", path: "/pricing" },
+      { label: "Gallery", path: "/gallery" },
+    ],
+  },
+  {
+    label: "Blog",
+    path: "/blog",
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Blog Grid", path: "/blog" },
+      { label: "Blog List", path: "/blog" },
+      { label: "Blog Details", path: "/blog" },
+    ],
+  },
+  {
+    label: "Faq's",
+    path: "/faqs",
+  },
+];
+export const Follow = [
+  {
+    image: "/images/FollowUsImg1.png"
+  },
+  {
+    image: "/images/FollowUsImg2.png"
+  },
+  {
+    image: "/images/FollowUsImg3.png"
+  },
+  {
+    image: "/images/FollowUsImg4.png"
+  },
+  {
+    image: "/images/FollowUsImg5.png"
+  },
+]
+
+

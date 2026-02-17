@@ -2,8 +2,15 @@ import React from "react";
 import { AddToCard, AddToWishlist, Star } from "./Icons";
 import Button from "./Button";
 import Link from "next/link";
+import { useWishlist } from "../context/WishlistContext";
 
-const ProductDetailsCard = ({ image, heading, title, ratings, price }) => {
+const ProductDetailsCard = ({ id,image, heading, title, ratings, price }) => {
+   const { wishlist, toggleWishlist } = useWishlist();
+
+  const isLiked = wishlist.some((item) => item.id === id);
+
+  const productData = { id, image, heading, title, ratings, price };
+
   // Dynamic Background Color Based on Title
   const cardBgColor = title?.toLowerCase().includes("vanilla")
     ? "bg-[rgba(247,242,247,1)]"
@@ -22,9 +29,12 @@ const ProductDetailsCard = ({ image, heading, title, ratings, price }) => {
       <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
         
         {/* Wishlist Button */}
-        <div  className="bg-white rounded-full w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
-          <AddToWishlist />
-        </div>
+          <div className="absolute top-2 left-2 z-10">
+        <AddToWishlist
+          liked={isLiked}
+          onClick={() => toggleWishlist(productData)}
+        />
+      </div>
 
         <div className="flex justify-center">
           {image}
@@ -32,15 +42,15 @@ const ProductDetailsCard = ({ image, heading, title, ratings, price }) => {
       </div>
 
       {/* Content Section */}
-      <div className="mt-[21px]">
+      <div className="mt-5.25">
 
         {/* Heading & Rating */}
         <div className="flex justify-between items-center">
-          <h3 className="text-darkbrown text-xl font-bold leading-[24px] max-w-[160px] w-full" >
+          <h3 className="text-darkbrown text-xl font-bold leading-6 max-w-40 w-full" >
             {heading}
           </h3>
 
-          <div className="flex gap-[3px] items-center">
+          <div className="flex gap-0.75 items-center">
             <Star />
             <p className="text-sm font-semibold text-darkbrown">
               {ratings}/5
@@ -49,12 +59,12 @@ const ProductDetailsCard = ({ image, heading, title, ratings, price }) => {
         </div>
 
         {/* Description */}
-        <p className="mt-[13px] max-w-[180px] w-full text-sm leading-[22px] text-gray-600">
+        <p className="mt-3.25 max-w-45 w-full text-sm leading-5.5 text-gray-600">
           {title}
         </p>
 
         {/* Price & Cart Button */}
-        <div className="mt-[12px]  flex justify-between items-center">
+        <div className="mt-3  flex justify-between items-center">
           <p className="font-bold text-[22px] text-pink">
             {price}
           </p>

@@ -107,8 +107,8 @@ const Header = () => {
             </div>
 
             {/* Right Section - Search, Notification & Contact */}
-            <div className="flex items-center gap-[52px]">
-              <div className="flex gap-[32px] pl-[17.86px]">
+            <div className="flex items-center gap-13">
+              <div className="flex gap-8 pl-[17.86px]">
                 {/* Search Icon */}
                 <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

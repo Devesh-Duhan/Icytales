@@ -1,4 +1,5 @@
 import React from 'react'
+import BestSellsSwiper from '../common/BestSellsSwiper'
 
 const BestSells = () => {
   return (
@@ -13,6 +14,7 @@ const BestSells = () => {
             </p>
             {/* swiper */}
             <div className='mt-[50px]'>
+               <BestSellsSwiper/>
                 
  
             </div>

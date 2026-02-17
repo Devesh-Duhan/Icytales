@@ -9,15 +9,19 @@ import HeroSection from "@/components/home/HeroSection";
 /** @format */
 
 import SummerSpecial from "@/components/home/SummerSpecial";
+import FollowUs from "@/components/home/FollowUs";
+import BestSells from "@/components/home/BestSells";
 
 export default function Home() {
   return (
     <>
-     {/* <Explore/> */}
+     {/* <Explore/>
      <Favourite/>
-    
-     {/* <SignUp/> */}
-     {/* <Categories/> */}
+     <SignUp/>
+     <Categories/> */}
+     {/* <FollowUs/> */}
+     <BestSells/>
+
     </>
   );
 }

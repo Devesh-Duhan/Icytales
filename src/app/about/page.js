@@ -1,23 +1,22 @@
-import React from 'react'
+/** @format */
 
-import Hero from './Hero'
-import Journey from './Journey'
-import Misson from './Misson'
-import Statics from './Statics'
-import Team from './Team'
-import SignUp from '@/components/home/SignUp'
+import React from "react";
+// import Hero from "./Hero";
+import Journey from "./Journey";
+import Misson from "./Misson";
+import Statics from "./Statics";
+import Team from "./Team";
 
 const page = () => {
   return (
-    <div>
-        <Hero/>
-        <Journey/>
-        <Misson/>
-        <Statics/>
-        <Team/>
-        <SignUp/>
-    </div>
-  )
-}
+    <>
+      {/* <Hero /> */}
+      <Journey />
+      <Misson />
+      <Statics />
+      <Team />
+    </>
+  );
+};
 
-export default page
+export default page;
