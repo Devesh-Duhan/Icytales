@@ -1,5 +1,3 @@
-/** @format */
-
 import React from "react";
 
 const Button = ({
@@ -15,34 +13,27 @@ const Button = ({
 }) => {
   const themeClass =
     theme === "primary"
-      ? "bg-pink shadow-[0_3px_22px_3px_rgba(248,61,142,0.31)] border border-transparent hover:bg-transparent hover:border-pink"
+      ? "bg-pink shadow-[0_3px_22px_3px_rgba(248,61,142,0.31)] border border-transparent hover:bg-transparent hover:border-pink hover:text-pink"
       : theme === "secondary"
-      ? "bg-darkpurple  border border-transparent  hover:bg-transparent hover:border-darkpurple"
+      ? "bg-darkpurple shadow-[0_3px_22px_3px_rgba(104,50,146,0.31)] border border-transparent hover:bg-transparent hover:border-darkpurple hover:text-darkpurple"
       : "";
 
   return (
     <button
       className={`
         ${themeClass}
-
-        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
-
-        text-white font-semibold rounded-full group
-
-
-        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs
-
-        flex items-center justify-center duration-300 cursor-pointer 
+        text-white font-semibold rounded-full max-md:text-sm max-sm:text-xs group
+        flex items-center justify-center duration-300 cursor-pointer
         ${height || ""}
-        ${iconposition || ""}
         ${width || ""}
         ${leading || ""}
+        ${iconposition || ""}
         ${className}
       `}
       {...props}
     >
       {children}
-      {icons && <span className="ml-2 ">{icons}</span>}
+      {icons && <span className="ml-2">{icons}</span>}
     </button>
   );
 };

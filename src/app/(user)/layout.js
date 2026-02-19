@@ -2,6 +2,7 @@ import { Archivo, Berkshire_Swash } from "next/font/google";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { WishlistProvider } from "@/components/context/WishlistContext";
 
 
 

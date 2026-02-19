@@ -146,10 +146,11 @@ export const homeProducts = [
     id: 1,
     heading: " Chocolate Brownie Sundae",
     title: "Rich chocolate ice cream with chunks of brownie.",
-    price: "$5.49",
+   price: 5.49,
     image: "/images/chocolate.png",
     ratings:"4.3",
       type: "favourite",
+       category: "Sundaes"
     
 
     
@@ -158,59 +159,65 @@ export const homeProducts = [
     id: 2,
     heading: "Strawberry Shortcake",
     title: "Strawberry ice cream layered with shortcake.",
-    price: "$5.29",
+    price: 5.49,
     image: "/images/strawberry.png",
     ratings:"4.4",
       type: "favourite",
+       category: "Sundaes"
    
   },
   {
     id: 3,
     heading: "Mint Chocolate Chip Cone",
     title: "Refreshing mint ice cream with chocolate chips.",
-    price: "$3.99",
+    price: 5.49,
     image: "/images/mint.png",
     ratings:"3.8",
       type: "favourite",
+        category: "Ice Cream Cakes"
     
   },
   {
     id: 4,
     heading: "Classic Vanilla Ice Cream",
     title: "Creamy vanilla ice cream topped with cherry.",
-    price: "$4.99",
+   price: 5.49,
     image: "/images/vanilla.png",
     ratings:"4.6",
       type: "bestSeller",
+        category: "Ice Cream Cakes"
    
   },
   {
     id: 5,
     heading: "Mint Chocolate Chip Cone",
     title: "Refreshing mint ice cream with chocolate chips.",
-    price: "$3.99",
+   price: 6.49,
     image: "/images/mint.png",
     ratings:"4.6",
       type: "bestSeller",
+      category: "Popsicles"
    
   },
    {
     id: 6,
     heading: "Mint Chocolate Chip Cone",
     title: "Refreshing mint ice cream with chocolate chips.",
-    price: "$3.99",
+   price: 4.49,
     image: "/images/mint.png",
      ratings:"4.6",
       type: "bestSeller",
+      category: "Popsicles"
   },
   {
     id: 7,
     heading: "Strawberry Shortcake",
     title: "Strawberry ice cream layered with shortcake.",
-    price: "$5.29",
+ price: 5.49,
     image: "/images/strawberry.png",
      ratings:"4.6",
       type: "bestSeller",
+      category: "Milkshakes"
       
 
   },
@@ -218,10 +225,11 @@ export const homeProducts = [
     id: 8,
     heading: "Strawberry Shortcake",
     title: "Strawberry ice cream layered with shortcake.",
-    price: "$5.29",
+    price: 5.49,
     image: "/images/strawberry.png",
     ratings:"4.4",
       type: "favourite",
+      category: "Milkshakes"
    
   },
 
@@ -446,3 +454,20 @@ export const MoreProducts = [
   { id: 8, productimage: "/images/fourColumnEighthCard.png" },
   { id: 4, productimage: "/images/fourColumnForthCard.png" },
 ];
+export const Follow = [
+  {
+    image: "/images/FollowUsImg1.png"
+  },
+  {
+    image: "/images/FollowUsImg2.png"
+  },
+  {
+    image: "/images/FollowUsImg3.png"
+  },
+  {
+    image: "/images/FollowUsImg4.png"
+  },
+  {
+    image: "/images/FollowUsImg5.png"
+  },
+]

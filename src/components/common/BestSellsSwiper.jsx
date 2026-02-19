@@ -71,18 +71,12 @@ const BestSellsSwiper = () => {
             />
           </SwiperSlide>
         ))} */}
-        {topRatedProducts.map((item) => (
-             <SwiperSlide key={item.id}>
-  <ProductDetailsCard
-  id={item.id} 
-    image={<img src={item.image} alt={item.heading}  className="mx-auto h-[150px] object-contain" />}
-    heading={item.heading}
-    title={item.title}
-    price={item.price}
-     ratings={item.ratings}
-  />
-   </SwiperSlide>
+       {topRatedProducts.map((item) => (
+  <SwiperSlide key={item.id}>
+    <ProductDetailsCard {...item} />
+  </SwiperSlide>
 ))}
+
       </Swiper>
     </div>
   );

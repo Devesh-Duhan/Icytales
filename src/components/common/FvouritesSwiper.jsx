@@ -8,6 +8,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import ProductDetailsCard from "../common/ProductDetailsCard";
 import { homeProducts, products } from "./Helper";
+import Image from "next/image";
 
 
 
@@ -55,22 +56,11 @@ const FavouritesSwiper = () => {
         }}
       >
         {favouriteProducts.map((item) => (
-          <SwiperSlide key={item.id}>
-            <ProductDetailsCard
-              image={
-                <img
-                  src={item.image}
-                  alt={item.heading}
-                  className="mx-auto h-[150px] object-contain"
-                />
-              }
-              heading={item.heading}
-              title={item.title}
-              price={item.price}
-              ratings={item.ratings}
-            />
-          </SwiperSlide>
-        ))}
+  <SwiperSlide key={item.id}>
+    <ProductDetailsCard {...item} />
+  </SwiperSlide>
+))}
+
       </Swiper>
     </div>
   );

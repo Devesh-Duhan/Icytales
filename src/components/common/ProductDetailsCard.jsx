@@ -19,34 +19,39 @@ const ProductDetailsCard = ({ id,image, heading, title, ratings, price }) => {
     : title?.toLowerCase().includes("mint")
     ? "bg-[rgba(246,249,225,1)]"
      : title?.toLowerCase().includes("peach")
-    ? "rgba(255,239,216,1)"
+    ? "bg-rgba(255,239,216,1)"
     : "bg-[rgba(255,250,244,1)]";
 
   return (
-    <div className="bg-white p-2.75 rounded-xl shadow-md  mx-auto">
+    <div className="bg-white p-2.75 rounded-xl w-full shadow-md  mx-auto">
       
       {/* Image Section */}
       <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
         
         {/* Wishlist Button */}
-          <div className="absolute top-2 left-2 z-10">
+          <div className="absolute top-[10px] left-[10px] z-10 bg-white rounded-full p-[11px] ">
         <AddToWishlist
           liked={isLiked}
           onClick={() => toggleWishlist(productData)}
         />
       </div>
 
-        <div className="flex justify-center">
-          {image}
-        </div>
+       <div className="flex justify-center">
+  <img
+    src={image}
+    alt={heading}
+    className="w-40 h-40 object-contain"
+  />
+</div>
+
       </div>
 
       {/* Content Section */}
       <div className="mt-5.25">
 
         {/* Heading & Rating */}
-        <div className="flex justify-between items-center">
-          <h3 className="text-darkbrown text-xl font-bold leading-6 max-w-40 w-full" >
+        <div className="flex justify-between items-center  ">
+          <h3 className="text-darkbrown  text-xl font-bold leading-6 max-w-40 w-full" >
             {heading}
           </h3>
 
@@ -66,7 +71,7 @@ const ProductDetailsCard = ({ id,image, heading, title, ratings, price }) => {
         {/* Price & Cart Button */}
         <div className="mt-3  flex justify-between items-center">
           <p className="font-bold text-[22px] text-pink">
-            {price}
+            ${price}
           </p>
 <Link href="/" >
           <Button
