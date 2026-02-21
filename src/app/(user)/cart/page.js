@@ -1,12 +1,17 @@
-import React from 'react'
+
+import ShoppingCart from '@/components/cart/ShoppingCart'
 import CommonHero from '@/components/common/CommonHero'
-import PrivacyPolicy from '@/components/privacy-policy/PrivacyPolicy'
+import React from 'react'
 
 const page = () => {
   return (
     <div>
         <CommonHero/>
-        <PrivacyPolicy/></div>
+        <ShoppingCart/>
+
+
+         
+    </div>
   )
 }
 

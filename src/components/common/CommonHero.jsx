@@ -5,13 +5,13 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const CommonHero = () => {
-  const title = usePathname().replace("-", " ").slice(1);
-
+  const title = usePathname().replace("-"," ").slice(1).replace("-", " ")
   return (
     <section className="w-full py-37.5 max-lg:py-32 max-md:py-26 max-sm:py-20 bg-[linear-gradient(106.17deg,#EFD7EF_8%,#F5F9FC_40%,#F8EAE1_66%,#EAF8F9_91%)] flex flex-col gap-8.75 max-md:gap-6  max-sm:gap-4 items-center justify-center">
+
       {/* Title */}
       <h1 className="text-[80px] capitalize max-lg:text-7xl max-md:text-6xl max-sm:text-5xl berkshire leading-20 font-semibold text-darkbrown text-center px-2">
-        {title}
+        {title === "faqs" ? "Faq's" : title}
       </h1>
 
       {/* Breadcrumb */}
@@ -23,7 +23,9 @@ const CommonHero = () => {
 
           <span>/</span>
 
-          <span className=" capitalize">{title}</span>
+          <span className="capitalize">
+            {title === "faqs" ? "Faq's" : title}
+          </span>
         </>
       </div>
     </section>

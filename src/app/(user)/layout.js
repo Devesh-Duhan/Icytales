@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased`}
       >
-       
+       <Header/>
         <ScrollToTop/>
         {children}
         <Footer/>

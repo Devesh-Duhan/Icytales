@@ -145,7 +145,7 @@ export default function ProductDetail() {
           {/* CART + QTY */}
           <div className="flex items-center gap-12.25 max-lg:py-4 max-lg:gap-4 pt-7.75 pb-9.5 max-md:pt-4 max-md:pb-4">
             {/* Qty */}
-            <div className="flex items-center  leading-6.75 max-w-40.25 max-md:max-w-28 w-full py-3 max-md:py-0 border border-[#E3E4E5] rounded-full px-4 gap-4">
+            <div className="flex items-center  leading-6.75 max-w-40.25 max-md:max-w-28 w-full justify-center max-md:py-0 border border-[#E3E4E5] rounded-full px-4 gap-4">
               <button
                 onClick={decreaseQty}
                 className="text-lg font-bold leading-6.75 cursor-pointer"

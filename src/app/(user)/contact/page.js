@@ -9,22 +9,8 @@ import Map from '@/components/contact/Map'
 const page = () => {
   return (
     <>
-    <Header/>
-    <CommonHero
-        title="Contact Us"
-        breadcrumb={
-          <>
-            <Link href="/">
-              <span>Home</span>
-            </Link>
 
-            <span>/</span>
-
-            <Link href="/about">
-              <span>Contact Us</span>
-            </Link>
-          </> }
-      />
+        <CommonHero/>
         <GetInTouch/>
         <Map/>
         <Footer/>

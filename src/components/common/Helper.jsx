@@ -20,7 +20,6 @@ export const statisticsData = [
     label: "Employees Working",
   },
 ];
-
 export const teamData = [
   {
     id: 1,
@@ -284,7 +283,6 @@ export const PolicyData = [
     desc: "You have the right to access, update, or delete your personal information at any time. You can opt out of receiving promotional emails by following the instructions provided in the email. By using our website, you consent to the terms of this Privacy Policy. If you have any questions or concerns, please contact us.",
   },
 ];
-
 export const CommitmentCards = [
   {
     id: 1,
@@ -371,4 +369,42 @@ export const MoreProducts = [
   { id: 1, productimage: "/images/fourColumnFirstcard.png" },
   { id: 8, productimage: "/images/fourColumnEighthCard.png" },
   { id: 4, productimage: "/images/fourColumnForthCard.png" },
+];
+export const cartItemsData = [
+  {
+    id: 1,
+    name: "Classic Vanilla",
+    image: "/images/classicVanilla.png",
+    color: "White",
+    size: "L",
+    price: 4.99,
+    qty: 3,
+  },
+  {
+    id: 2,
+    name: "Chocolate Brownie",
+    image: "/images/chocolateBrownie.png",
+    color: "Brown",
+    size: "S",
+    price: 5.49,
+    qty: 6,
+  },
+  {
+    id: 3,
+    name: "Strawberry Cake",
+    image: "/images/strawberryCake.png",
+    color: "Red",
+    size: "M",
+    price: 5.29,
+    qty: 4,
+  },
+  {
+    id: 4,
+    name: "Mint Chocolate",
+    image: "/images/mintChocolate.png",
+    color: "Green",
+    size: "L",
+    price: 3.99,
+    qty: 2,
+  },
 ];

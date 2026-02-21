@@ -76,10 +76,7 @@ const RelatedProducts = () => {
                 <div
                   className={`${getCardBgColor(item.heading)} relative  overflow-hidden rounded-[10px] p-4`}
                 >
-                  {/* <div className="h-6 w-23.75 flex justify-center items-center absolute z-20 -right-5 top-3 rotate-42  bg-pink text-white text-xs font-bold leading-3">
-                    {item.discount}
-                  </div> */}
-                  {/* Wishlist Button */}
+                 
                   <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center absolute top-2.5 left-2.5 shadow-sm">
                     <AddToWishlist />
                   </div>
