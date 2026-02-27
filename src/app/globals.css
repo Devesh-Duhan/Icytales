@@ -29,3 +29,7 @@ body {
   font-family: "Berkshire Swash", serif;
   @apply text-[60px] leading-16 max-lg:text-[30px] max-md:text-[25px] max-sm:text-[20px];
 }
+
+.button-underline {
+  @apply transition-all duration-300 ease-out;
+}

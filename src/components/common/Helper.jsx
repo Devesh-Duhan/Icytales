@@ -1,3 +1,5 @@
+/** @format */
+
 export const statisticsData = [
   {
     value: 91,
@@ -80,25 +82,25 @@ export const products = [
   },
 ];
 export const peopleReviews = [
-    {
-      id: 1,
-      name: "Kevin Andrew",
-      role: "Happy Customer",
-      text: "Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do eiusmod tempor incididunt.",
-    },
-    {
-      id: 2,
-      name: "Sarah John",
-      role: "Ice Cream Lover",
-      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
-    },
-    {
-      id: 3,
-      name: "Michael Smith",
-      role: "Sweet Fan",
-      text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
-    },
-  ];
+  {
+    id: 1,
+    name: "Kevin Andrew",
+    role: "Happy Customer",
+    text: "Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do eiusmod tempor incididunt.",
+  },
+  {
+    id: 2,
+    name: "Sarah John",
+    role: "Ice Cream Lover",
+    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+  },
+  {
+    id: 3,
+    name: "Michael Smith",
+    role: "Sweet Fan",
+    text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+  },
+];
 export const NavLinks = [
   {
     label: "Home",
@@ -140,4 +142,132 @@ export const NavLinks = [
     path: "/faqs",
   },
 ];
+export const BlogCategories = [
+  {
+    bloglink: "All",
+  },
+  {
+    bloglink: "Advices",
+  },
+  {
+    bloglink: "Announcements",
+  },
+  {
+    bloglink: "News",
+  },
+  {
+    bloglink: "Consultation",
+  },
+  {
+    bloglink: "Development",
+  },
+];
 
+export const BlogCards = [
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Advices",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Announcements",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "News",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Consultation",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Development",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Advices",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Announcements",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "News",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Consultation",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Development",
+  },
+];
+export const BlogPaginationData = [
+  {
+    pageNumber: 1,
+  },
+  {
+    pageNumber: 2,
+  },
+  {
+    pageNumber: 3,
+  },
+  {
+    pageNumber: 4,
+  },
+  {
+    pageNumber: 5,
+  },
+  {
+    pageNumber: 6,
+  },
+  {
+    pageNumber: 7,
+  },
+  {
+    pageNumber: 8,
+  },
+];
