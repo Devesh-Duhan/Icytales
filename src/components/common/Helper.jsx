@@ -256,7 +256,7 @@ export const homeProducts = [
     heading: "Mint Chocolate Chip Cone",
     title: "Refreshing mint ice cream with chocolate chips.",
     price: 5.49,
-    image: ["/images/mint.png", "/images/mint2.png", "/images/mint3.png"],
+    image: ["/images/mint.png", "/images/mint.png", "/images/mint.png"],
     colors: ["#98FF98", "#00FA9A", "#3CB371", "#90EE90"],
     sizes: ["S", "M", "L"],
     reviews: [

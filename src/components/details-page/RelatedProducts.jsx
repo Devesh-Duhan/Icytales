@@ -1,5 +1,5 @@
 "use client";
-import { homeProducts, products } from "@/components/common/Helper";
+import { homeProducts } from "@/components/common/Helper";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -11,11 +11,11 @@ import Button from "@/components/common/Button";
 import Image from "next/image";
 
 const RelatedProducts = ({ productId }) => {
-  const ProductData = homeProducts.find(
-    (items) => items.id === parseInt(productId),
-  );
+  // Optionally use productId to filter/exclude current item
+  // const ProductData = homeProducts.find((items) => items.id === parseInt(productId));
   const [liked, setLiked] = useState({});
-  const [hovered, setHovered] = useState(0);
+  // hold id of hovered card (null when none)
+  const [hoveredId, setHoveredId] = useState(null);
 
   const toggleLike = (itemId) => {
     setLiked((prev) => ({
@@ -23,7 +23,10 @@ const RelatedProducts = ({ productId }) => {
       [itemId]: !prev[itemId],
     }));
   };
-  console.log(homeProducts[0].image[0],hovered, "liked");
+  // console.log for debugging – use hoveredId instead of undefined hovered
+  console.log(homeProducts[0].image[0], hoveredId, "liked");
+
+
   // Dynamic Background Color Based on Title
   const getCardBgColor = (heading) => {
     const text = heading?.toLowerCase().trim();
@@ -85,11 +88,7 @@ const RelatedProducts = ({ productId }) => {
             .filter((item) => item.type === "discount")
             .map((item) => (
               <SwiperSlide key={item.id}>
-                <div
-                  // onMouseEnter={() => setHovered(0)}
-                  // onMouseLeave={() => setHovered(1)}
-                  className="bg-white p-2.75 rounded-xl shadow-md  mx-auto mt-12.5 max-lg:mt-9 max-md:mt-6"
-                >
+                <div className="bg-white p-2.75 rounded-xl shadow-md  mx-auto mt-12.5 max-lg:mt-9 max-md:mt-6">
                   {/* Image Section */}
                   <div
                     className={`${getCardBgColor(item.heading)} relative  overflow-hidden rounded-[10px] p-4`}
@@ -103,9 +102,17 @@ const RelatedProducts = ({ productId }) => {
                       </span>
                     </div>
                     <Link href={`/products/${item.id}`}>
-                      <div className="flex justify-center relative px-7.75 py-8.75 min-w-24.25 w-full h-61">
+                      <div
+                        onMouseEnter={() => setHoveredId(item.id)}
+                        onMouseLeave={() => setHoveredId(null)}
+                        className="flex justify-center relative px-7.75 py-8.75 min-w-24.25 w-full h-61"
+                      >
                         <Image
-                          src={item.image[hovered]}
+                          src={
+                            hoveredId === item.id && item.image[1]
+                              ? item.image[1]
+                              : item.image[0]
+                          }
                           alt="productphoto"
                           fill
                           className="object-contain"
@@ -122,7 +129,6 @@ const RelatedProducts = ({ productId }) => {
                         <h3 className="text-darkbrown text-xl font-bold leading-6 max-w-40 w-full">
                           {item.heading}
                         </h3>
-
                         <div className="flex gap-0.75 items-center">
                           <Star />
                           <p className="text-sm font-semibold text-darkbrown">
@@ -130,7 +136,6 @@ const RelatedProducts = ({ productId }) => {
                           </p>
                         </div>
                       </div>
-
                       {/* Description */}
                       <p className="mt-3.25 max-md:mt-2 max-w-45 max-sm:max-w-72.5 w-full text-sm leading-5.5 text-gray-600">
                         {item.title}
