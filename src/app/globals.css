@@ -33,3 +33,7 @@ body {
 .berkshire {
   font-family: "Berkshire Swash", serif;
 }
+
+.button-underline {
+  @apply transition-all duration-300 ease-out;
+}
