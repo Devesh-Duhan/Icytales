@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../common/Button';
 import { AddToWishlist, RightArrow } from '../common/Icons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SignUp = () => {
   return (
@@ -57,9 +58,9 @@ const SignUp = () => {
             />
             <label htmlFor="policy">
               I agree to the{" "}
-              <span className="text-pink-500 cursor-pointer underline">
+           <Link href="/privacy-policy"> <span className="text-pink-500 cursor-pointer underline">
                 privacy policy
-              </span>
+              </span></Link>
             </label>
           </div>
         </div>

@@ -53,14 +53,14 @@ const Footer = () => {
                 </Link>
               </li>
 
-              <li class="flex items-center gap-1 md:gap-4">
-                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Blog</Link>
+              <li className="flex items-center gap-1 md:gap-4">
+                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/blog">Blog</Link>
               </li>
 
               <li class="flex items-center gap-1 md:gap-4">
                 <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="/">Shop</Link>
+                <Link href="/shop">Shop</Link>
               </li>
 
               <li class="flex items-center gap-1 md:gap-4">
@@ -78,7 +78,7 @@ const Footer = () => {
                 <h3 className="text-[14px] sm:text-[16px] font-semibold text-white">
                   Address:
                 </h3>
-                <p className="text-[10px] sm:text-[14px] text-[#CFB6E2] pt-2 w-[120px] sm:w-[206.62px]">
+                <p className="text-[10px] sm:text-[14px] text-[#CFB6E2] pt-2 w-30 sm:w-[206.62px]">
                   121 King Street Melbourne, 3000, Australia
                 </p>
               </div>

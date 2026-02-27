@@ -1,7 +1,6 @@
 import React from 'react'
-
-import PrivacyPolicy from '../../components/privacy-policy/PrivacyPolicy'
 import CommonHero from '@/components/common/CommonHero'
+import PrivacyPolicy from '@/components/privacy-policy/PrivacyPolicy'
 
 const page = () => {
   return (

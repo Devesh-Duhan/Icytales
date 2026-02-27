@@ -25,9 +25,9 @@ const ClientRatings = () => {
       </div>
 
       {/* Swiper */}
-      <div className="pt-12.5 max-lg:pt-10 max-md:pt-6 max-sm:pt-3">
-        <Swiper
-          className=" pb-15! max-lg:pb-12! max-md:pb-8!  [&_.swiper-pagination]:bottom-1.5!
+
+      <Swiper
+        className=" py-15! px-3! max-lg:py-12! max-md:py-8!  [&_.swiper-pagination]:bottom-1.5!
     [&_.swiper-pagination]:flex
     [&_.swiper-pagination]:justify-center
     [&_.swiper-pagination]:items-center
@@ -43,76 +43,75 @@ const ClientRatings = () => {
 
     [&_.swiper-pagination-bullet-active]:!bg-[rgba(248,61,142,1)]
     [&_.swiper-pagination-bullet-active]:scale-125"
-          modules={[Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 3000 }}
-          pagination={{
-            clickable: true,
-          }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {testimonialData.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div
-                className="bg-white rounded-[20px] p-[50px_32px_51px_35px] max-lg:p-[40px_26px_40px_25px]  max-md:p-[30px_16px_30px_18px]relative
+        modules={[Pagination, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 3000 }}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {testimonialData.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div
+              className="bg-white rounded-[20px] p-[50px_32px_51px_35px] max-lg:p-[40px_26px_40px_25px]  max-md:p-[30px_16px_30px_18px]relative
                 shadow-[0px_2px_73px_2px_#0000000D]
                 border-b-2 border-pink transition-all duration-300 ease-out
                 hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(236,72,153,0.35)]"
-              >
-                {/* Quote */}
-                <Image
-                  src="/images/testimonialQuote.png"
-                  height={28}
-                  width={41}
-                  alt="quote"
-                />
+            >
+              {/* Quote */}
+              <Image
+                src="/images/testimonialQuote.png"
+                height={28}
+                width={41}
+                alt="quote"
+              />
 
-                {/* Text */}
-                <p className="text-lightbrown pt-5.75 leading-6 max-md:leading-4 max-md:text-sm max-sm:text-xs">
-                  {item.text}
-                </p>
+              {/* Text */}
+              <p className="text-lightbrown pt-5.75 leading-6 max-md:leading-4 max-md:text-sm max-sm:text-xs">
+                {item.text}
+              </p>
 
-                {/* Bottom User */}
-                <div className="flex gap-4.75 pt-7.5">
-                  {/* Image */}
-                  <div className="w-13.5 h-13.5 relative rounded-full overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
+              {/* Bottom User */}
+              <div className="flex gap-4.75 pt-7.5">
+                {/* Image */}
+                <div className="w-13.5 h-13.5 relative rounded-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                  {/* Stars */}
+                  <div className="flex gap-1 text-yellow-400 pb-1">
+                    {[...Array(item.rating)].map((_, i) => (
+                      <RatingsStar key={i} />
+                    ))}
                   </div>
 
-                  <div className="flex flex-col gap-1.5">
-                    {/* Stars */}
-                    <div className="flex gap-1 text-yellow-400 pb-1">
-                      {[...Array(item.rating)].map((_, i) => (
-                        <RatingsStar key={i} />
-                      ))}
-                    </div>
+                  {/* Name */}
+                  <h4 className="text-pink font-bold leading-6 text-lg">
+                    {item.name}
+                  </h4>
 
-                    {/* Name */}
-                    <h4 className="text-pink font-bold leading-6 text-lg">
-                      {item.name}
-                    </h4>
-
-                    {/* Role */}
-                    <p className="text-lightbrown leading-5 text-sm">
-                      {item.role}
-                    </p>
-                  </div>
+                  {/* Role */}
+                  <p className="text-lightbrown leading-5 text-sm">
+                    {item.role}
+                  </p>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import Button from '../common/Button';
 import { RightArrow } from '../common/Icons';
+import Link from 'next/link';
 
 const Explore = () => {
   return (
@@ -52,16 +53,18 @@ const Explore = () => {
               From rich chocolate fudge to creamy vanilla sundaes, discover our
               menu of classic ice cream creations.
             </p>
-            <Button
-              theme="primary"
-              height="h-15.5 max-lg:h-12 max-md:h-10 max-sm:h-8" 
-              width="w-[238px] max-lg:w-[190px] max-md:w-[160px] max-sm:w-[135px]
+            <Link href="/about-us">
+              <Button
+                theme="primary"
+                height="h-15.5 max-lg:h-12 max-md:h-10 max-sm:h-8"
+                width="w-[238px] max-lg:w-[190px] max-md:w-[160px] max-sm:w-[135px]
           "
-              icons={<RightArrow />}
-              type="button"
-            >
-              Explore Our Menu
-            </Button>
+                icons={<RightArrow />}
+                type="button"
+              >
+                Explore Our Menu
+              </Button>
+            </Link>
           </aside>
         </div>
       </div>
