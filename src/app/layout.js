@@ -1,6 +1,9 @@
+/** @format */
+
 import { Archivo, Berkshire_Swash } from "next/font/google";
 import "./globals.css";
-
+import Header from "@/components/common/Header";
+import { WishlistProvider } from "@/components/context/WishlistContext";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -11,7 +14,7 @@ const berkshire = Berkshire_Swash({
   variable: "--font-berkshire-mono",
   subsets: ["latin"],
   weight: ["400"],
-  display:'swap'
+  display: "swap",
 });
 
 export const metadata = {
@@ -25,9 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${berkshire.variable}  antialiased`}
       >
-      
-        {children}
-        
+        <WishlistProvider>{children}</WishlistProvider>
       </body>
     </html>
   );

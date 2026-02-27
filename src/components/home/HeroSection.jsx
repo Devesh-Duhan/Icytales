@@ -34,7 +34,7 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <Link
-              href="/flavors"
+              href="/about-us"
               className="inline-flex items-center gap-4 px-8 py-4 bg-darkpurple text-white text-[16px] font-semibold rounded-[30px] hover:shadow-lg hover:shadow-darkpurple/30 transition-all duration-300 hover:scale-105"
             >
               Browse Our Classic Flavors

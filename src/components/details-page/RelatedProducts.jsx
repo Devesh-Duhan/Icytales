@@ -1,6 +1,6 @@
 "use client";
-import { Discountproducts, products } from "@/components/common/Helper";
-import React from "react";
+import { homeProducts, products } from "@/components/common/Helper";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -10,7 +10,20 @@ import Link from "next/link";
 import Button from "@/components/common/Button";
 import Image from "next/image";
 
-const RelatedProducts = () => {
+const RelatedProducts = ({ productId }) => {
+  const ProductData = homeProducts.find(
+    (items) => items.id === parseInt(productId),
+  );
+  const [liked, setLiked] = useState({});
+  const [hovered, setHovered] = useState(0);
+
+  const toggleLike = (itemId) => {
+    setLiked((prev) => ({
+      ...prev,
+      [itemId]: !prev[itemId],
+    }));
+  };
+  console.log(homeProducts[0].image[0],hovered, "liked");
   // Dynamic Background Color Based on Title
   const getCardBgColor = (heading) => {
     const text = heading?.toLowerCase().trim();
@@ -34,8 +47,7 @@ const RelatedProducts = () => {
       <div>
         <Swiper
           className=" 
-    pb-12.5! max-md:pb-8!
-
+        pb-12.5! max-md:pb-8!
     [&_.swiper-pagination]:bottom-1.5!
     [&_.swiper-pagination]:flex
     [&_.swiper-pagination]:justify-center
@@ -57,10 +69,10 @@ const RelatedProducts = () => {
           spaceBetween={20}
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-            }}
+          // autoplay={{
+          //   delay: 1000,
+          //   disableOnInteraction: false,
+          // }}
           loop={true}
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -69,69 +81,82 @@ const RelatedProducts = () => {
             1280: { slidesPerView: 4 },
           }}
         >
-          {Discountproducts.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="bg-white p-2.75 rounded-xl shadow-md  mx-auto mt-12.5 max-lg:mt-9 max-md:mt-6">
-                {/* Image Section */}
+          {homeProducts
+            .filter((item) => item.type === "discount")
+            .map((item) => (
+              <SwiperSlide key={item.id}>
                 <div
-                  className={`${getCardBgColor(item.heading)} relative  overflow-hidden rounded-[10px] p-4`}
+                  // onMouseEnter={() => setHovered(0)}
+                  // onMouseLeave={() => setHovered(1)}
+                  className="bg-white p-2.75 rounded-xl shadow-md  mx-auto mt-12.5 max-lg:mt-9 max-md:mt-6"
                 >
-                 
-                  <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center absolute top-2.5 left-2.5 shadow-sm">
-                    <AddToWishlist />
-                  </div>
-
-                  <div className="flex justify-center relative px-7.75 py-8.75 min-w-24.25 w-full h-61">
-                    <Image
-                      src={item.image}
-                      alt="productphoto"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-
-                {/* Content Section */}
-                <div className="mt-5.25">
-                  {/* Heading & Rating */}
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-darkbrown text-xl font-bold leading-6 max-w-40 w-full">
-                      {item.heading}
-                    </h3>
-
-                    <div className="flex gap-0.75 items-center">
-                      <Star />
-                      <p className="text-sm font-semibold text-darkbrown">
-                        4.9/5
-                      </p>
+                  {/* Image Section */}
+                  <div
+                    className={`${getCardBgColor(item.heading)} relative  overflow-hidden rounded-[10px] p-4`}
+                  >
+                    <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center absolute top-2.5 left-2.5 shadow-sm cursor-pointer z-20">
+                      <span className="cursor-pointer">
+                        <AddToWishlist
+                          liked={liked[item.id]}
+                          onClick={() => toggleLike(item.id)}
+                        />
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="mt-3.25 max-md:mt-2 max-w-45 max-sm:max-w-72.5 w-full text-sm leading-5.5 text-gray-600">
-                    {item.title}
-                  </p>
-
-                  {/* Price & Cart Button */}
-                  <div className="mt-3 max-md:mt-2  flex justify-between items-center">
-                    <p className="font-bold text-[22px] text-pink">
-                      {item.price}
-                    </p>
-
-                    <Link href="/">
-                      <Button
-                        theme="secondary"
-                        height="h-[46px]"
-                        width="w-[46px]"
-                        icons={<AddToCard />}
-                        type="button"
-                      />
+                    <Link href={`/products/${item.id}`}>
+                      <div className="flex justify-center relative px-7.75 py-8.75 min-w-24.25 w-full h-61">
+                        <Image
+                          src={item.image[hovered]}
+                          alt="productphoto"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </Link>
                   </div>
+
+                  {/* Content Section */}
+                  <Link href={`/products/${item.id}`}>
+                    <div className="mt-5.25">
+                      {/* Heading & Rating */}
+                      <div className="flex justify-between items-center">
+                        <h3 className="text-darkbrown text-xl font-bold leading-6 max-w-40 w-full">
+                          {item.heading}
+                        </h3>
+
+                        <div className="flex gap-0.75 items-center">
+                          <Star />
+                          <p className="text-sm font-semibold text-darkbrown">
+                            {item.ratings}/5
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <p className="mt-3.25 max-md:mt-2 max-w-45 max-sm:max-w-72.5 w-full text-sm leading-5.5 text-gray-600">
+                        {item.title}
+                      </p>
+
+                      {/* Price & Cart Button */}
+                      <div className="mt-3 max-md:mt-2  flex justify-between items-center">
+                        <p className="font-bold text-[22px] text-pink">
+                          {item.price}
+                        </p>
+
+                        <Link href="/cart">
+                          <Button
+                            theme="secondary"
+                            height="h-[46px]"
+                            width="w-[46px]"
+                            icons={<AddToCard />}
+                            type="button"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </section>

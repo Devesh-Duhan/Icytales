@@ -5,6 +5,7 @@ import { useState } from "react";
 import { cartItemsData } from "../common/Helper";
 import { LeftIcon, RightArrow, SafeandSecureIcon } from "../common/Icons";
 import Button from "../common/Button";
+import Link from "next/link";
 
 export default function ShoppingCart() {
   const [cartItems, setCartItems] = useState(cartItemsData);
@@ -207,15 +208,17 @@ export default function ShoppingCart() {
                     ${grandTotal.toFixed(2)}
                   </span>
                 </div>
-                <Button
-                  theme="primary"
-                  height="h-[50px]"
-                  width="w-full"
-                  icons={<RightArrow />}
-                  className="text-sm leading-3.5 mt-5"
-                >
-                  Proceed to checkout
-                </Button>
+                <Link href="/checkout">
+                  <Button
+                    theme="primary"
+                    height="h-[50px]"
+                    width="w-full"
+                    icons={<RightArrow />}
+                    className="text-sm leading-3.5 mt-5"
+                  >
+                    Proceed to checkout
+                  </Button>
+                </Link>
               </div>
 
               {/* Bottom Info */}
