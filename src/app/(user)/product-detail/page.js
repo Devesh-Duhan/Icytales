@@ -11,8 +11,6 @@ const page = () => {
         < ProductDetail/>
         <ProductTabs/>
         <RelatedProducts/>
-
-
     </div>
   )
 }

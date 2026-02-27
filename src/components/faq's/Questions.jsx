@@ -38,7 +38,7 @@ const Questions = () => {
             <div
               className={`overflow-hidden transition-all duration-300 ${
                 openId === faq.id
-                  ? "max-h-40 mt-4 pt-4 border-t border-gray-200"
+                  ? "h-auto mt-4 pt-4 border-t border-gray-200"
                   : "max-h-0"
               }`}
             >

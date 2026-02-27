@@ -20,7 +20,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
       <div className={`${cardBgColor} relative rounded-[10px] p-4`}>
         
         {/* Wishlist Button */}
-        <div  className="bg-white rounded-full w-[40px] h-[40px] flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
+        <div  className="bg-white rounded-full w-10 h-10 flex items-center justify-center absolute top-[10px] left-[10px] shadow-sm">
           <AddToWishlist />
         </div>
 
@@ -52,7 +52,7 @@ const ProductDetailsCard = ({ image, heading, title, price }) => {
         </p>
 
         {/* Price & Cart Button */}
-        <div className="mt-[12px]  flex justify-between items-center">
+        <div className="mt-3  flex justify-between items-center">
           <p className="font-bold text-[22px] text-pink">
             {price}
           </p>

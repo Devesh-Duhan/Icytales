@@ -20,13 +20,13 @@ const Button = ({
 
   return (
     <button
-      className={` ${themeClass} max-md:text-sm max-sm:text-xs text-white font-semibold rounded-full group flex items-center justify-center duration-300 cursor-pointer
-      ${height || ""}
-      ${iconposition || ""}
-      ${width || ""}
-      ${leading || ""}
-      ${className}
-`}
+      className={` ${themeClass} max-md:text-sm max-sm:text-xs text-white font-semibold rounded-full group flex items-center justify-center duration-300 cursor-pointer 
+        ${height || ""}
+        ${iconposition || ""}
+        ${width || ""}
+        ${leading || ""}
+        ${className}
+      `}
       {...props}
     >
       {children}
