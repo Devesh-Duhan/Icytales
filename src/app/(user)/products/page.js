@@ -6,7 +6,7 @@ import Products from "@/components/shop/Products";
 
 const page = () => {
   return (
-    <div>
+    <div >
       <Products />
     </div>
   );
