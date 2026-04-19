@@ -9,11 +9,9 @@ import Map from '@/components/contact/Map'
 const page = () => {
   return (
     <>
-
         <CommonHero/>
         <GetInTouch/>
         <Map/>
-        <Footer/>
     </>
   )
 }
