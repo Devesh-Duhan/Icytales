@@ -1,3 +1,5 @@
+/** @format */
+
 export const statisticsData = [
   {
     value: 91,
@@ -58,6 +60,26 @@ export const teamData = [
     image: "/images/laurenTrout.png",
   },
 ];
+export const peopleReviews = [
+  {
+    id: 1,
+    name: "Kevin Andrew",
+    role: "Happy Customer",
+    text: "Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do eiusmod tempor incididunt.",
+  },
+  {
+    id: 2,
+    name: "Sarah John",
+    role: "Ice Cream Lover",
+    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+  },
+  {
+    id: 3,
+    name: "Michael Smith",
+    role: "Sweet Fan",
+    text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+  },
+];
 export const NavLinks = [
   {
     label: "Home",
@@ -79,9 +101,9 @@ export const NavLinks = [
     path: "/pages",
     hasDropdown: true,
     dropdownItems: [
-      { label: "Our Team", path: "/team" },
-      { label: "Pricing", path: "/pricing" },
-      { label: "Gallery", path: "/gallery" },
+      { label: "Our Team", path: "/our-team" },
+      { label: "Review", path: "/review" },
+      { label: "Shop", path: "/shop" },
     ],
   },
   {
@@ -97,6 +119,26 @@ export const NavLinks = [
   {
     label: "Faq's",
     path: "/faqs",
+  },
+];
+export const BlogCategories = [
+  {
+    bloglink: "All",
+  },
+  {
+    bloglink: "Advices",
+  },
+  {
+    bloglink: "Announcements",
+  },
+  {
+    bloglink: "News",
+  },
+  {
+    bloglink: "Consultation",
+  },
+  {
+    bloglink: "Development",
   },
 ];
 
@@ -135,32 +177,6 @@ export const testimonialData = [
   },
 ];
 
-export const peopleReviews = [
-  {
-    id: 1,
-    name: "Kevin Andrew",
-    role: "Happy Client",
-    text: "Quisuam est rui dolorem ipsum rui do sit amet, consectetur, adipise velit seu non numquam eiusm temora incidunt aut labore siner...",
-  },
-  {
-    id: 2,
-    name: "Peri James",
-    role: "Happy Client",
-    text: "Ruisuam est rui dolorem ipsum rui do sit amet, consectetur, adipise velit seu non numquam eiusm temora incidunt aut labore siner...",
-  },
-  {
-    id: 3,
-    name: "Naurth Reough",
-    role: "Happy Client",
-    text: "Nuisuam est rui dolorem ipsum rui do sit amet, consectetur, adipise velit seu non numquam eiusm temora incidunt aut labore siner...",
-  },
-  {
-    id: 4,
-    name: "Sarah Mitchell",
-    role: "Happy Client",
-    text: "Amazing ice cream quality and excellent customer service. I highly recommend this shop!",
-  },
-];
 export const ContactDetails = [
   {
     image: "/images/contactlocation.png",
@@ -855,5 +871,140 @@ export const PolicyData = [
     id: 5,
     title: " Your Choices:",
     desc: "You have the right to access, update, or delete your personal information at any time. You can opt out of receiving promotional emails by following the instructions provided in the email. By using our website, you consent to the terms of this Privacy Policy. If you have any questions or concerns, please contact us.",
+  },
+];
+
+export const items = [
+    {
+      id: 1,
+      title: "3 x Classic Vanilla",
+      desc: "Creamy vanilla ice cream topped with cherry.",
+      price: 13.0,
+    },
+    {
+      id: 2,
+      title: "6 x Chocolate Brownie",
+      desc: "Rich chocolate ice cream with chunks of brownie.",
+      price: 23.0,
+    },
+    {
+      id: 3,
+      title: "4 x Strawberry Cake",
+      desc: "Strawberry ice cream layered with shortcake.",
+      price: 22.0,
+    },
+    {
+      id: 4,
+      title: "2 x Mint Chocolate",
+      desc: "Refreshing mint ice cream with chocolate chips.",
+      price: 7.0,
+    },
+  ];
+export const BlogCards = [
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Advices",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Announcements",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "News",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Consultation",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Development",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Advices",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Announcements",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "News",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Consultation",
+  },
+  {
+    blogcardimage: "/images/card-vanila-icecream.jpg",
+    blogcardtitle: "Our strength, Your Business",
+    blogcardtext:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem ipsum dolor sit amet, consectetur",
+    blogcardbutton: "Read More",
+    category: "Development",
+  },
+];
+export const BlogPaginationData = [
+  {
+    pageNumber: 1,
+  },
+  {
+    pageNumber: 2,
+  },
+  {
+    pageNumber: 3,
+  },
+  {
+    pageNumber: 4,
+  },
+  {
+    pageNumber: 5,
+  },
+  {
+    pageNumber: 6,
+  },
+  {
+    pageNumber: 7,
+  },
+  {
+    pageNumber: 8,
   },
 ];

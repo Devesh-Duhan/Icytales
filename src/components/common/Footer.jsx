@@ -35,37 +35,37 @@ const Footer = () => {
             <h3 className="text-[18px] sm:text-[22px] font-semibold text-white">
               Navigation
             </h3>
-            <ul className="grid grid-cols-2 max-sm:grid-cols-3 max-md:grid-cols-6 gap-x-2 lg:gap-x-6.25 xl:gap-x-[47.68px] gap-y-4.5 text-[#CFB6E2] text-[12px] sm:text-[14px] font-light max-w-md  lg:mx-auto pt-6.25">
-              <li className="flex items-center gap-1 md:gap-4">
-                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Home</Link>
+            <ul class="grid grid-cols-2 max-sm:grid-cols-3 max-md:grid-cols-6 gap-x-2 lg:gap-x-6.25 xl:gap-x-[47.68px] gap-y-4.5 text-[#CFB6E2] text-[12px] sm:text-[14px] font-light max-w-md  lg:mx-auto pt-6.25">
+              <li class="flex items-center gap-1 md:gap-4">
+                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/">Home</Link>
               </li>
 
-              <li className="flex items-center gap-1 md:gap-4">
-                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Products</Link>
+              <li class="flex items-center gap-1 md:gap-4">
+                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/">Products</Link>
               </li>
 
-              <li className="flex items-center gap-1 md:gap-4 relative">
-                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#" className="relative">
+              <li class="flex items-center gap-1 md:gap-4 relative">
+                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/about-us" class="relative">
                   About
                 </Link>
               </li>
 
               <li className="flex items-center gap-1 md:gap-4">
                 <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Blog</Link>
+                <Link href="/blog">Blog</Link>
               </li>
 
-              <li className="flex items-center gap-1 md:gap-4">
-                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Shop</Link>
+              <li class="flex items-center gap-1 md:gap-4">
+                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/shop">Shop</Link>
               </li>
 
-              <li className="flex items-center gap-1 md:gap-4">
-                <span className="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
-                <Link href="#">Contact</Link>
+              <li class="flex items-center gap-1 md:gap-4">
+                <span class="min-w-2 max-w-2 h-2 bg-pink-400 rounded-full"></span>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ const Footer = () => {
                 <h3 className="text-[14px] sm:text-[16px] font-semibold text-white">
                   Address:
                 </h3>
-                <p className="text-[10px] sm:text-[14px] text-[#CFB6E2] pt-2 w-[120px] sm:w-[206.62px]">
+                <p className="text-[10px] sm:text-[14px] text-[#CFB6E2] pt-2 w-30 sm:w-[206.62px]">
                   121 King Street Melbourne, 3000, Australia
                 </p>
               </div>
@@ -133,7 +133,7 @@ const Footer = () => {
       </div>
       <div className="max-w-285.5 border-[#FFFFFF26] border-t w-full mx-auto px-4 mt-22.5">
         <p className="text-[10px] sm:text-[12px] text-[#CFB6E2] text-center py-4.5">
-          Copyright © 2024 BlackRise Themes Inc All rights reserved.
+           Copyright © {new Date().getFullYear()} BlackRise Themes Inc. All rights reserved.
         </p>
       </div>
     </div>

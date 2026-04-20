@@ -1,9 +1,11 @@
-import Header from '@/components/common/Header'
+import Form from '@/app/(user)/checkout/Form'
 import React from 'react'
 
 const page = () => {
   return (
-    <div><Header/></div>
+    <div>
+        <Form/>
+    </div>
   )
 }
 
