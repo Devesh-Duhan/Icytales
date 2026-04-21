@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="100" viewBox="0 0 160 100">
+  <rect width="160" height="100" rx="16" fill="#f6f6f6" stroke="#d1d5db"/>
+  <rect x="12" y="24" width="136" height="52" rx="12" fill="#000"/>
+  <circle cx="36" cy="50" r="12" fill="#ff9900"/>
+  <text x="55" y="58" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="bold">DISCOVER</text>
+  <text x="55" y="76" fill="#d1d5db" font-family="Arial, sans-serif" font-size="10">Fast checkout</text>
+</svg>

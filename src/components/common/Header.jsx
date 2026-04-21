@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { NavLinks } from "./Helper";
 import { Clipboard, ContactArrow, Dropdown } from "./Icons";
+import { useAuth } from "../context/AuthContext";
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const { user, logout } = useAuth();
 
   const toggleDropdown = (name) => {
     setOpenDropdown(openDropdown === name ? null : name);
@@ -54,7 +56,10 @@ const Header = () => {
       <div className=" max-w-362.5 w-full mx-auto px-4">
         <nav className="flex items-center justify-between" ref={menuRef}>
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 outline-none shrink-0">
+          <Link
+            href="/"
+            className="flex items-center gap-1 outline-none shrink-0"
+          >
             <Image
               src="/images/logo.png"
               alt="IcyTales"
@@ -111,8 +116,18 @@ const Header = () => {
               <div className="flex gap-8 pl-[17.86px]">
                 {/* Search Icon */}
                 <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
                   </svg>
                 </button>
 
@@ -135,6 +150,43 @@ const Header = () => {
                   <ContactArrow />
                 </Link>
               </div>
+              <div className="flex items-center gap-4">
+                {user ? (
+                  <>
+                    <span className="text-sm text-slate-700">
+                      Hi, {user.name}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={logout}
+                      className="rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-700 hover:bg-slate-100"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="text-sm font-medium text-slate-700 hover:text-pink"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/register"
+                      className="text-sm font-medium text-slate-700 hover:text-pink"
+                    >
+                      Register
+                    </Link>
+                    <Link
+                      href="/admin/login"
+                      className="text-sm font-medium text-pink"
+                    >
+                      Admin
+                    </Link>
+                  </>
+                )}
+              </div>
             </div>
           </div>
 
@@ -142,8 +194,18 @@ const Header = () => {
           <div className="flex lg:hidden items-center gap-4">
             {/* Search */}
             <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
             </button>
 
@@ -197,7 +259,11 @@ const Header = () => {
       >
         {/* Menu Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
-          <Link href="/" className="outline-none" onClick={() => setMobileMenuOpen(false)}>
+          <Link
+            href="/"
+            className="outline-none"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             <Image
               src="/images/logo.png"
               alt="IcyTales"
@@ -211,14 +277,61 @@ const Header = () => {
             className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-pink/10 transition-colors cursor-pointer"
             aria-label="Close menu"
           >
-            <svg className="w-5 h-5 text-darkbrown" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-5 h-5 text-darkbrown"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
 
         {/* Menu Links */}
         <div className="overflow-y-auto h-[calc(100%-80px)] px-6 py-4">
+          <div className="flex items-center justify-between mb-6">
+            {user ? (
+              <div className="space-y-1">
+                <p className="text-sm font-semibold text-slate-800">
+                  Welcome, {user.name}
+                </p>
+                <button
+                  type="button"
+                  onClick={logout}
+                  className="text-sm text-slate-700 hover:text-pink"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-2">
+                <Link
+                  href="/login"
+                  className="text-sm font-medium text-slate-700 hover:text-pink"
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/register"
+                  className="text-sm font-medium text-slate-700 hover:text-pink"
+                >
+                  Register
+                </Link>
+                <Link
+                  href="/admin/login"
+                  className="text-sm font-medium text-pink"
+                >
+                  Admin login
+                </Link>
+              </div>
+            )}
+          </div>
           <ul className="flex flex-col gap-1">
             {NavLinks.map((link, index) => (
               <li key={index}>
@@ -237,12 +350,19 @@ const Header = () => {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
-                        openDropdown === link.label ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+                        openDropdown === link.label
+                          ? "max-h-60 opacity-100"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
                       <div className="pl-4 py-1 flex flex-col gap-1">

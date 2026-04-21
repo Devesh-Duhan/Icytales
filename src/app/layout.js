@@ -2,8 +2,9 @@
 
 import { Archivo, Berkshire_Swash } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/common/Header";
 import { WishlistProvider } from "@/components/context/WishlistContext";
+import { AuthProvider } from "@/components/context/AuthContext";
+import { CartProvider } from "@/components/context/CartContext";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -28,7 +29,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${berkshire.variable}  antialiased`}
       >
-        <WishlistProvider>{children}</WishlistProvider>
+        <WishlistProvider>
+          <AuthProvider>
+            <CartProvider>{children}</CartProvider>
+          </AuthProvider>
+        </WishlistProvider>
       </body>
     </html>
   );
