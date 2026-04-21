@@ -1,12 +1,10 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import AdminHeader from "@/components/admin/AdminHeader";
 import AdminTable from "@/components/admin/AdminTable";
 import { useAuth } from "@/components/context/AuthContext";
 import { getAdminProducts } from "@/lib/api";
-
 const columns = [
   { key: "title", label: "Product" },
   { key: "category", label: "Category" },
@@ -14,7 +12,6 @@ const columns = [
   { key: "stock", label: "Stock" },
   { key: "status", label: "Status" },
 ];
-
 export default function AdminProductsPage() {
   const router = useRouter();
   const { user, loading } = useAuth();
@@ -26,7 +23,6 @@ export default function AdminProductsPage() {
       router.push("/admin/login");
     }
   }, [loading, user, router]);
-
   useEffect(() => {
     const loadProducts = async () => {
       try {
@@ -51,6 +47,7 @@ export default function AdminProductsPage() {
   }, []);
 
   return (
+    
     <div className="space-y-8">
       <AdminHeader
         title="Products"
