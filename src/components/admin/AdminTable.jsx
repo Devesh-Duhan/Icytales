@@ -20,11 +20,11 @@ const AdminTable = ({ columns, rows }) => {
           {rows.map((row, index) => (
             <tr
               key={index}
-              className="border-t border-slate-200 hover:bg-slate-50"
+              className="border-t border-slate-200 hover:bg-slate-50 transition-colors"
             >
               {columns.map((column) => (
                 <td key={column.key} className="px-5 py-4 text-slate-700">
-                  {row[column.key]}
+                  {column.render ? column.render(row) : row[column.key]}
                 </td>
               ))}
             </tr>

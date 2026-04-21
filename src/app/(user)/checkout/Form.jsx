@@ -7,34 +7,64 @@ import Image from "next/image";
 import Button from "../../../components/common/Button";
 import Input from "../../../components/common/Input";
 import { RightArrow } from "../../../components/common/Icons";
-import { cartItemsData } from "../../../components/common/Helper";
+import { useCart } from "@/components/context/CartContext";
+import { createOrder } from "@/lib/api";
 
 const Form = () => {
   const router = useRouter();
+  const { cartItems, clearCart, subtotal } = useCart();
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [selectedCard, setSelectedCard] = useState("visa");
   const [upiId, setUpiId] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
   } = useForm();
 
   const shippingCharge = 20;
-  const subtotal = cartItemsData.reduce(
-    (acc, item) => acc + item.price * item.qty,
-    0,
-  );
   const grandTotal = (subtotal + shippingCharge).toFixed(2);
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    // Simulate payment processing
-    setTimeout(() => {
+  const onSubmit = async (data) => {
+    if (cartItems.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const orderData = {
+        items: cartItems.map(item => ({
+          product: item._id || item.id,
+          name: item.name,
+          image: item.image,
+          price: item.price,
+          qty: item.qty
+        })),
+        shippingAddress: {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          city: data.city,
+          state: data.state,
+          zip: data.zip,
+        },
+        paymentMethod: paymentMethod,
+        itemsPrice: subtotal,
+        shippingPrice: shippingCharge,
+        totalPrice: parseFloat(grandTotal),
+      };
+
+      await createOrder(orderData);
+      clearCart();
       router.push("/thankyou");
-    }, 2000);
+    } catch (error) {
+      alert("Order failed: " + error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const cardOptions = [
@@ -419,11 +449,12 @@ const Form = () => {
                 height="h-[62px]"
                 width="w-full sm:w-[320px]"
                 iconposition="flex gap-[18px]"
-                icons={<RightArrow />}
+                icons={isSubmitting ? null : <RightArrow />}
                 className="text-base shadow-[0_15px_40px_rgba(248,61,142,0.3)] hover:shadow-[0_20px_50px_rgba(248,61,142,0.4)] transition-shadow"
                 type="submit"
+                loading={isSubmitting}
               >
-                Place Order Now
+                {isSubmitting ? "Processing..." : "Place Order Now"}
               </Button>
             </div>
           </div>
@@ -443,15 +474,15 @@ const Form = () => {
           </div>
 
           <div className="space-y-4">
-            {cartItemsData.map((item) => (
+            {cartItems.map((item) => (
               <div
-                key={item.id}
+                key={item.id || item._id}
                 className="rounded-[24px] border border-[#ECE4F0] bg-gradient-to-r from-[#FAF6FF] to-[#FFF5F9] p-5 shadow-sm"
               >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-lg font-semibold text-[#0F0200]">
-                      {item.name} x {item.qty}
+                      {item.name || item.title} x {item.qty}
                     </p>
                     <p className="mt-1 text-sm text-[#7B7B7B]">
                       Unit price: ${item.price.toFixed(2)}

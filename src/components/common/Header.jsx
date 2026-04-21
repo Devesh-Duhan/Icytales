@@ -3,14 +3,20 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { NavLinks } from "./Helper";
-import { Clipboard, ContactArrow, Dropdown } from "./Icons";
+import { homeProducts } from "./Helper";
+import { Clipboard, ContactArrow, Dropdown, CartIcon } from "./Icons";
 import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const menuRef = useRef(null);
+  const searchRef = useRef(null);
   const { user, logout } = useAuth();
+  const { cartItems } = useCart();
 
   const toggleDropdown = (name) => {
     setOpenDropdown(openDropdown === name ? null : name);
@@ -45,6 +51,9 @@ const Header = () => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setOpenDropdown(null);
+      }
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setSearchOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -90,6 +99,7 @@ const Header = () => {
                               <Link
                                 key={i}
                                 href={item.path}
+                                onClick={() => setOpenDropdown(null)}
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-pink/10 hover:text-pink transition-colors"
                               >
                                 {item.label}
@@ -115,29 +125,81 @@ const Header = () => {
             <div className="flex items-center gap-13">
               <div className="flex gap-8 pl-[17.86px]">
                 {/* Search Icon */}
-                <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                <div className="relative" ref={searchRef}>
+                  <button
+                    onClick={() => setSearchOpen(!searchOpen)}
+                    className="text-darkbrown hover:text-pink transition-colors cursor-pointer"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </button>
+                  {searchOpen && (
+                    <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2 z-50">
+                      <input
+                        type="text"
+                        placeholder="Search products..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter") {
+                            window.location.href = `/products?search=${encodeURIComponent(searchTerm)}`;
+                            setSearchOpen(false);
+                          }
+                        }}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink"
+                      />
+                      {searchTerm && (
+                        <div className="mt-2 max-h-40 overflow-y-auto">
+                          {homeProducts
+                            .filter((product) =>
+                              product.heading
+                                .toLowerCase()
+                                .includes(searchTerm.toLowerCase()),
+                            )
+                            .slice(0, 5)
+                            .map((product, index) => (
+                              <div
+                                key={index}
+                                onClick={() => {
+                                  window.location.href = `/products?search=${encodeURIComponent(product.heading)}`;
+                                  setSearchOpen(false);
+                                }}
+                                className="px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm"
+                              >
+                                {product.heading}
+                              </div>
+                            ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
 
-                {/* Notification Bell */}
-                <button className="relative text-darkbrown hover:text-pink transition-colors cursor-pointer">
-                  <Clipboard />
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink rounded-full flex items-center justify-center">
-                    <span className="text-white text-[9px] font-bold">0</span>
-                  </span>
-                </button>
+                {/* Cart Icon */}
+                <Link
+                  href="/cart"
+                  className="relative text-darkbrown hover:text-pink transition-colors"
+                >
+                  <CartIcon />
+                  {cartItems.length > 0 && (
+                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink rounded-full flex items-center justify-center">
+                      <span className="text-white text-[9px] font-bold">
+                        {cartItems.length}
+                      </span>
+                    </span>
+                  )}
+                </Link>
               </div>
 
               {/* Contact Us Button */}
@@ -193,29 +255,57 @@ const Header = () => {
           {/* ========== MOBILE/TABLET RIGHT ICONS ========== */}
           <div className="flex lg:hidden items-center gap-4">
             {/* Search */}
-            <button className="text-darkbrown hover:text-pink transition-colors cursor-pointer">
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div className="relative">
+              <button
+                onClick={() => setSearchOpen(!searchOpen)}
+                className="text-darkbrown hover:text-pink transition-colors cursor-pointer"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </button>
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+              {searchOpen && (
+                <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 p-2 z-50">
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        window.location.href = `/products?search=${encodeURIComponent(searchTerm)}`;
+                      }
+                    }}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink"
+                  />
+                </div>
+              )}
+            </div>
 
-            {/* Notification */}
-            <button className="relative text-darkbrown hover:text-pink transition-colors cursor-pointer">
-              <Clipboard />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink rounded-full flex items-center justify-center">
-                <span className="text-white text-[9px] font-bold">0</span>
-              </span>
-            </button>
+            {/* Cart */}
+            <Link
+              href="/cart"
+              className="relative text-darkbrown hover:text-pink transition-colors"
+            >
+              <CartIcon />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-pink rounded-full flex items-center justify-center">
+                  <span className="text-white text-[9px] font-bold">
+                    {cartItems.length}
+                  </span>
+                </span>
+              )}
+            </Link>
 
             {/* Hamburger Button */}
             <button

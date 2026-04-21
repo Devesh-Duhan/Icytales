@@ -23,7 +23,7 @@ export default function ProductModal({ isOpen, onClose, onSave, product }) {
     if (product) {
       setFormData({
         ...product,
-        price: product.price.toString().replace("$", ""), // Handle price display
+        price: product.price ? product.price.toString().replace("$", "") : "", // Handle price display
       });
     } else {
       setFormData({
